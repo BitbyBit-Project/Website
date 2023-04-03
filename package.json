@@ -1,7 +1,7 @@
 {
   "name": "spa_react_javascript_hello-world",
   "version": "0.1.0",
-  "homepage": "https://BitbyBit-Project.github.io/",
+  "homepage": "https://BitbyBit-Project.github.io/Website",
   "private": true,
   "dependencies": {
     "@auth0/auth0-react": "^2.0.1",
