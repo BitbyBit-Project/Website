@@ -45,10 +45,10 @@ export const ContactPage = () => {
         <div className="content__body">
           <p id="page-description">
             <span>
-              <strong>If you'd like to contact us, please reach use the following information:</strong>
+              <strong>If you'd like to contact us, please reach us using the following information:</strong>
             </span>
           </p>
-          <CodeSnippet title="Public Message" code={message} />
+          
         </div>
       </div>
     </PageLayout>

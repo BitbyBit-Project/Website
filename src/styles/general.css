@@ -31,12 +31,14 @@ body {
   overflow-y: scroll;
 }
 
+/*Added homeh1*/
 h1,
 h2,
 h3,
 h4,
 h5,
-h6 {
+h6,
+homeh1 {
   font-family: var(--font-secondary);
   font-weight: 600;
   color: rgba(0, 0, 0, 0.86);
@@ -44,7 +46,8 @@ h6 {
 
 h1,
 h2,
-h3 {
+h3,
+homeh1 {
   margin-top: 3.2rem;
   margin-bottom: 1.6rem;
 }
@@ -82,6 +85,12 @@ h6 {
 
 p {
   margin: 0 0 1.6rem;
+}
+
+/*Added homeh1*/
+homeh1 { 
+  font-size: 3.2rem;
+  text-align: center;
 }
 
 strong {
