@@ -1,7 +1,7 @@
-import React, { useEffect, useState } from "react";
-import { CodeSnippet } from "../components/code-snippet";
+//import React, { useEffect, useState } from "react";
+//import { CodeSnippet } from "../components/code-snippet";
 import { PageLayout } from "../components/page-layout";
-import { getPublicResource } from "../services/message.service";
+//import { getPublicResource } from "../services/message.service";
 import { Auth0Feature } from "../components/auth0-feature";
 import { Helmet } from "react-helmet";
 
@@ -16,7 +16,7 @@ export const AboutPage = () => {
     {
       title: "Lucas Troutman",
       description:
-        "Part-time instructional aide for local school. Hobby musician with an interest in game-development.",
+        "Computer Science Major. Part-time instructional aide for local school. Hobby musician with an interest in game-development.",
       icon: "https://i.imgur.com/ym6olN6.png",
     },
     {
