@@ -1,0 +1,15 @@
+{
+  "dev": {
+    "awscloudformation": {
+      "AuthRoleName": "amplify-nursingvrwebsite-dev-194306-authRole",
+      "UnauthRoleArn": "arn:aws:iam::004636177976:role/amplify-nursingvrwebsite-dev-194306-unauthRole",
+      "AuthRoleArn": "arn:aws:iam::004636177976:role/amplify-nursingvrwebsite-dev-194306-authRole",
+      "Region": "us-west-1",
+      "DeploymentBucketName": "amplify-nursingvrwebsite-dev-194306-deployment",
+      "UnauthRoleName": "amplify-nursingvrwebsite-dev-194306-unauthRole",
+      "StackName": "amplify-nursingvrwebsite-dev-194306",
+      "StackId": "arn:aws:cloudformation:us-west-1:004636177976:stack/amplify-nursingvrwebsite-dev-194306/eb2f28c0-de5b-11ed-ab94-0281158959fb",
+      "AmplifyAppId": "d34tnomikodd6s"
+    }
+  }
+}
