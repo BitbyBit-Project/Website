@@ -20,7 +20,7 @@ export const MobileNavBarTabs = ({ handleClick }) => {
       />
     <div className="mobile-nav-bar__tabs">
       <MobileNavBarTab
-        path="/ontact"
+        path="/contact"
         label="Contact"
         handleClick={handleClick}
       />
