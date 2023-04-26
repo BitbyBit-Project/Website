@@ -6,10 +6,14 @@ export const MobileNavBarBrand = ({ handleClick }) => {
     <div onClick={handleClick} className="mobile-nav-bar__brand">
       <NavLink to="/">
         <img
+
+          // NVR logo - top and bottom: https://i.imgur.com/Xxu49Nh.png
+          // NVR logo - top only: https://i.imgur.com/SjcjdEc.png
+          
           className="mobile-nav-bar__logo"
-          src="https://cdn.auth0.com/blog/hub/code-samples/hello-world/auth0-logo.svg" // logo displayed in the navbar. yep.
-          alt="Auth0 shield logo"
-          width="82"
+          src="https://i.imgur.com/SjcjdEc.png" // logo displayed in the navbar. yep.
+          alt="Nursing Virtual Reality logo"
+          width="62"
           height="24"
         />
       </NavLink>
