@@ -4,14 +4,14 @@ import { NavBarTab } from "./nav-bar-tab";
 
 export const NavBarTabs = () => {
   const { isAuthenticated } = useAuth0();
-
-  //<NavBarTab path="/public" label="Public" />
   
   return (
     <div className="nav-bar__tabs">
       
+      <NavBarTab path="/resources" label="Resources" />
       <NavBarTab path="/about" label="About" />
       <NavBarTab path="/contact" label="Contact" />
+
       {isAuthenticated && (
         <>
           <NavBarTab path="/profile" label="Profile" />

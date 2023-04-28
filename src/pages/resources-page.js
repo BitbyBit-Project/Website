@@ -1,5 +1,5 @@
 import React, { useEffect, useState } from "react";
-import { CodeSnippet } from "../components/code-snippet";
+//import { CodeSnippet } from "../components/code-snippet";
 import { PageLayout } from "../components/page-layout";
 import { getPublicResource } from "../services/message.service";
 import { Helmet } from "react-helmet";
@@ -33,14 +33,15 @@ export const PublicPage = () => {
     };
   }, []);
 
+  //https://i.imgur.com/8bJY5e4.png
   return (
     <PageLayout>
         <Helmet>
-          <title>Public Page</title>
+          <title>Resources Page</title>
         </Helmet>
       <div className="content-layout">
         <h1 id="page-title" className="content__title">
-          Public Page
+          Resources Page
         </h1>
         <div className="content__body">
           <p id="page-description">
@@ -52,7 +53,10 @@ export const PublicPage = () => {
               <strong>Any visitor can access this page.</strong>
             </span>
           </p>
-          <CodeSnippet title="Public Message" code={message} />
+        </div>
+
+        <div>
+        <img src={"https:i.imgur.com/8bJY5e4.png"} alt="Nursing Virtual Reality Senior Design Poster" />
         </div>
       </div>
     </PageLayout>

@@ -8,8 +8,8 @@ export const MobileNavBarTabs = ({ handleClick }) => {
   return (
     <div className="mobile-nav-bar__tabs">
       <MobileNavBarTab
-        path="/public"
-        label="Public"
+        path="/resources"
+        label="Resources"
         handleClick={handleClick}
       />
     <div className="mobile-nav-bar__tabs">
