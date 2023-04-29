@@ -41,19 +41,21 @@ export const PublicPage = () => {
         </Helmet>
       <div className="content-layout">
         <h1 id="page-title" className="content__title">
-          Resources Page
+          Resources
         </h1>
         <div className="content__body">
           <p id="page-description">
             <span>
-              This page retrieves a <strong>public message</strong> from an
-              external API.
-            </span>
-            <span>
-              <strong>Any visitor can access this page.</strong>
+              Our team's work and resources relating to the Nursing Virtual Reality Project!
             </span>
           </p>
         </div>
+
+        <p>
+          <br></br>
+          <hr></hr>
+          <br></br>
+        </p>
 
         <div>
         <img src={"https:i.imgur.com/8bJY5e4.png"} alt="Nursing Virtual Reality Senior Design Poster" />

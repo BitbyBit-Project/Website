@@ -45,13 +45,49 @@ export const AboutPage = () => {
     {
       title: "Dr. Li Liu",
       description:
-        "Our professor and advisor for Computer Science Senior Design at California State University, Northridge",
+        "Our professor and advisor in Computer Science Senior Design at California State University, Northridge",
       icon: "https://i.imgur.com/C6HjF51.png",
     },
     {
       title: "Dr. Laurie Gelardi",
       description:
         "A major supporter, program tester, and provider of Nursing resources at California State University, Northridge",
+      icon: "https://i.imgur.com/C6HjF51.png",
+    },
+    {
+      title: "Professor Kevin Chaja",
+      description:
+        "Advisor to the previous development team of Computer Science seniors in 2021-2022 at California State University, Northridge",
+      icon: "https://i.imgur.com/C6HjF51.png",
+    },
+    {
+      title: "Sam Q. Livesay",
+      description:
+        "Project Manager and Scrum Master for Development Team 2022",
+      icon: "https://i.imgur.com/C6HjF51.png",
+    },
+    {
+      title: "Ben Nix-Bradley",
+      description:
+        "Unity Developer, Audio Implementation, & Animation Implementation for Development Team 2022",
+      icon: "https://i.imgur.com/C6HjF51.png",
+    },
+    {
+      title: "Vardan Torosyan",
+      description:
+        "Unity Developer for Development Team 2022",
+      icon: "https://i.imgur.com/C6HjF51.png",
+    },
+    {
+      title: "Aram Durgaryan",
+      description:
+        "Unity Developer for Development Team 2022",
+      icon: "https://i.imgur.com/C6HjF51.png",
+    },
+    {
+      title: "Richard Nohles",
+      description:
+        "Unity Developer & Backend Developer for Development Team 2022",
       icon: "https://i.imgur.com/C6HjF51.png",
     },
     
@@ -66,12 +102,54 @@ export const AboutPage = () => {
         <h1 id="page-title" className="content__title">
           About Us
         </h1>
+
+        <p>
+          <br></br>
+          <hr></hr>
+          <br></br>
+        </p>
+
         <div className="content__body">
-          <p id="page-description">
+      
+        <p class='indent'>
+          <span>
+            <strong>
+                Nursing Virtual Reality allows students to conduct human cardiovascular and respiratory assessments
+                in a virtual environment. The user will be able to interact with a simulated patient, stethoscope
+                clipboard menu, and other assets that nursing students would have access to in a real-life medical room setting.
+                Our project was built in Unity and is intended to run on the Oculus/Meta Quest 2.
+            </strong>
+          </span>
+        </p>
+        <p class='indent'>
+          <span>
+            <strong>
+                Because the program is built on the feedback and 
+                sources provided by the CSUN Nursing Department, it focuses on allowing 
+                CSUN nursing students to apply what they have learned, or are currently 
+                learning, from the course curriculum. Additionally, the program provides a feature which
+                allows users to answer a performance checklist while using the program.
+                This performance checklist prompts the user to record their deductions and 
+                findings when diagnosing the simulated patient. This same checklist can be 
+                submitted by the user to receive feedback on whether their findings about 
+                the patient were accurate. Nursing VR can be improved by additional features 
+                including more examinations focusing on different body systems, and an 
+                aspiring feature such as one that allows the user to give vocal commands 
+                and questions to the simulated patient.
+            </strong>
+          </span>
+        </p>
+
+        <br></br>
+        <hr></hr>
+        <br></br>
+
+          <p id="page-description" align = "center">
             <span>
-              <strong>This is the Computer Science development team of the Nursing Virtual Reality project 2023!</strong>
+              <strong>This is the Computer Science development team of the Nursing Virtual Reality Project 2023!</strong>
             </span>
           </p>
+          <br></br>
         <div className="auth0-features__grid">
 
         {featuresList.map((feature) => (
@@ -89,14 +167,15 @@ export const AboutPage = () => {
         <hr></hr>
         <br></br>
 
-        <p>
+        <p align = "center">
             <span>
               <strong>Contributors and Stakeholders of the Nursing Virtual Reality Project 2023</strong>
             </span>
         </p>
         
-          <div>
+          <div className="auth0-features__grid">
           {stakeholdersList.map((feature) => (
+            <div style={{margin: "5px", padding: "5px"}}>
             <Auth0Feature
               key={feature.resourceUrl}
               title={feature.title}
@@ -104,6 +183,7 @@ export const AboutPage = () => {
               resourceUrl={feature.resourceUrl}
               icon={feature.icon}
             />
+            </div>
           ))}
           </div>
       </div>
