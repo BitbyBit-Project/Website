@@ -11,43 +11,23 @@ export const HomePage = () => (
       <title>Nursing VR Homepage</title>
     </Helmet>
     <HeroBanner></HeroBanner>
-    <br></br>
+    <p></p>
+    <p></p>
     <div className="content__body" align="justify">
       <p class='indent'>
           <span>
             <strong>
-                Nursing VR is a virtual reality project that aims to provide 
-                nursing students a safe, immersive, and effective way to practice their diagnosing 
-                skills. We also aim to provide instructors a tool for managing student assessments 
-                in a nursing course.
-            </strong>
-          </span>
-        </p>
-        <p class='indent'>
-          <span>
-            <strong>
-                The product allows students to conduct human cardiovascular and respiratory assessments
-                in a virtual environment. The user will be able to interact with a simulated patient, stethoscope
-                clipboard menu, and other assets that nursing students would have access to in a real-life medical room setting.
-                Our project was built in Unity and is intended to run on the Oculus/Meta Quest 2.
-            </strong>
-          </span>
-        </p>
-        <p class='indent'>
-          <span>
-            <strong>
-                Because the program is built on the feedback and 
-                sources provided by the CSUN Nursing Department, it focuses on allowing 
-                CSUN nursing students to apply what they have learned, or are currently 
-                learning, from the course curriculum. Additionally, the program provides a feature which
-                allows users to answer a performance checklist while using the program.
-                This performance checklist prompts the user to record their deductions and 
-                findings when diagnosing the simulated patient. This same checklist can be 
-                submitted by the user to receive feedback on whether their findings about 
-                the patient were accurate. Nursing VR can be improved by additional features 
-                including more examinations focusing on different body systems, and an 
-                aspiring feature such as one that allows the user to give vocal commands 
-                and questions to the simulated patient.
+                Nursing Virtual Reality is a collaborative senior design project between 
+                the Department of Nursing and the Department of Computer Science and has been 
+                evolving for the past 5 years as a clinical training tool at California State University Northridge.
+                The project's primary objective is to provide nursing students with a research-based
+                and cost-effective platform to conduct physical assessments in-line with the CSUN nursing curriculum.
+                The project offers a cost-effective training tool built on virtual reality, which aims to ensure
+                every student receives the same high-quality education and experience. Our goal is to provide a
+                safe, immersive, and effective way for students to practice their assessment skills and for
+                instructors, a way to manage students' metrics. Our development in the past year features
+                implementations of the cardiovascular assessment, animations, a user-interactable stethoscope,
+                heartbeat and breathing sounds, controller haptics/pulsations, a database, a website, and user interfaces.
             </strong>
           </span>
         </p>
