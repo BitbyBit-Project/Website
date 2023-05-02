@@ -14,6 +14,7 @@ import { AboutPage } from "./pages/about-page";
 import { ContactPage } from "./pages/contact-page";
 import { GradeSheet } from "./pages/grade-sheet";
 import { createTheme } from "@mui/material";
+import { CardioSetupPage } from "./pages/cardiosetup-page";
 
 export const App = () => {
   const { isLoading } = useAuth0();
@@ -39,6 +40,7 @@ export const App = () => {
       <Route path="/about" element={<AboutPage />} />
       <Route path="/contact" element={<ContactPage />} />
       <Route path="*" element={<NotFoundPage />} />
+      <Route path="/cardiosetup" element={<CardioSetupPage />} />
     </Routes>
   );
 };
