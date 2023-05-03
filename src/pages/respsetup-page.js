@@ -28,6 +28,172 @@ export const RespSetupPage = () => {
   const [node20, set20] = useState("");
 
   const [message, setMessage] = useState("");
+  /* Color Changes for nodes when corresponding dropdown menus are clicked */
+  const [isOpen0, setIsOpen0] = useState(false);
+  const [circleColor0, setCircleColor0] = useState("transparent");
+  const handleDropdownToggle0 = (event) => {
+    setIsOpen0(!isOpen0);
+    setCircleColor0(prevColor => prevColor === "transparent" ? "yellow" : "transparent");
+  };
+  const [isOpen1, setIsOpen1] = useState(false);
+  const [circleColor1, setCircleColor1] = useState("transparent");
+  const handleDropdownToggle1 = (event) => {
+    setIsOpen1(!isOpen1);
+    setCircleColor1(prevColor => prevColor === "transparent" ? "yellow" : "transparent");
+  };
+  const [isOpen2, setIsOpen2] = useState(false);
+  const [circleColor2, setCircleColor2] = useState("transparent");
+  const handleDropdownToggle2 = (event) => {
+    setIsOpen2(!isOpen2);
+    setCircleColor2(prevColor => prevColor === "transparent" ? "white" : "transparent");
+  };
+  const [isOpen3, setIsOpen3] = useState(false);
+  const [circleColor3, setCircleColor3] = useState("transparent");
+  const handleDropdownToggle3 = (event) => {
+    setIsOpen3(!isOpen3);
+    setCircleColor3(prevColor => prevColor === "transparent" ? "white" : "transparent");
+  };
+  const [isOpen4, setIsOpen4] = useState(false);
+  const [circleColor4, setCircleColor4] = useState("transparent");
+  const handleDropdownToggle4 = (event) => {
+    setIsOpen4(!isOpen4);
+    setCircleColor4(prevColor => prevColor === "transparent" ? "yellow" : "transparent");
+  };
+  const [isOpen5, setIsOpen5] = useState(false);
+  const [circleColor5, setCircleColor5] = useState("transparent");
+  const handleDropdownToggle5 = (event) => {
+    setIsOpen5(!isOpen5);
+    setCircleColor5(prevColor => prevColor === "transparent" ? "yellow" : "transparent");
+  };
+  const [isOpen6, setIsOpen6] = useState(false);
+  const [circleColor6, setCircleColor6] = useState("transparent");
+  const handleDropdownToggle6 = (event) => {
+    setIsOpen6(!isOpen6);
+    setCircleColor6(prevColor => prevColor === "transparent" ? "yellow" : "transparent");
+  };
+  const [isOpen7, setIsOpen7] = useState(false);
+  const [circleColor7, setCircleColor7] = useState("transparent");
+  const handleDropdownToggle7 = (event) => {
+    setIsOpen7(!isOpen7);
+    setCircleColor7(prevColor => prevColor === "transparent" ? "yellow" : "transparent");
+  };
+  const [isOpen8, setIsOpen8] = useState(false);
+  const [circleColor8, setCircleColor8] = useState("transparent");
+  const handleDropdownToggle8 = (event) => {
+    setIsOpen8(!isOpen8);
+    setCircleColor8(prevColor => prevColor === "transparent" ? "yellow" : "transparent");
+  };
+  const [isOpen9, setIsOpen9] = useState(false);
+  const [circleColor9, setCircleColor9] = useState("transparent");
+  const handleDropdownToggle9 = (event) => {
+    setIsOpen9(!isOpen9);
+    setCircleColor9(prevColor => prevColor === "transparent" ? "yellow" : "transparent");
+  };
+  const [isOpen10, setIsOpen10] = useState(false);
+  const [circleColor10, setCircleColor10] = useState("transparent");
+  const handleDropdownToggle10 = (event) => {
+    setIsOpen10(!isOpen10);
+    setCircleColor10(prevColor => prevColor === "transparent" ? "white" : "transparent");
+  };
+  const [isOpen11, setIsOpen11] = useState(false);
+  const [circleColor11, setCircleColor11] = useState("transparent");
+  const handleDropdownToggle11 = (event) => {
+    setIsOpen11(!isOpen11);
+    setCircleColor11(prevColor => prevColor === "transparent" ? "white" : "transparent");
+  };
+  const [isOpen12, setIsOpen12] = useState(false);
+  const [circleColor12, setCircleColor12] = useState("transparent");
+  const handleDropdownToggle12 = (event) => {
+    setIsOpen12(!isOpen12);
+    setCircleColor12(prevColor => prevColor === "transparent" ? "yellow" : "transparent");
+  };
+  const [isOpen13, setIsOpen13] = useState(false);
+  const [circleColor13, setCircleColor13] = useState("transparent");
+  const handleDropdownToggle13 = (event) => {
+    setIsOpen13(!isOpen13);
+    setCircleColor13(prevColor => prevColor === "transparent" ? "yellow" : "transparent");
+  };
+  const [isOpen14, setIsOpen14] = useState(false);
+  const [circleColor14, setCircleColor14] = useState("transparent");
+  const handleDropdownToggle14 = (event) => {
+    setIsOpen14(!isOpen14);
+    setCircleColor14(prevColor => prevColor === "transparent" ? "yellow" : "transparent");
+  };
+  const [isOpen15, setIsOpen15] = useState(false);
+  const [circleColor15, setCircleColor15] = useState("transparent");
+  const handleDropdownToggle15 = (event) => {
+    setIsOpen15(!isOpen15);
+    setCircleColor15(prevColor => prevColor === "transparent" ? "yellow" : "transparent");
+  };
+  const [isOpen16, setIsOpen16] = useState(false);
+  const [circleColor16, setCircleColor16] = useState("transparent");
+  const handleDropdownToggle16 = (event) => {
+    setIsOpen16(!isOpen16);
+    setCircleColor16(prevColor => prevColor === "transparent" ? "yellow" : "transparent");
+  };
+  const [isOpen17, setIsOpen17] = useState(false);
+  const [circleColor17, setCircleColor17] = useState("transparent");
+  const handleDropdownToggle17 = (event) => {
+    setIsOpen17(!isOpen17);
+    setCircleColor17(prevColor => prevColor === "transparent" ? "yellow" : "transparent");
+  };
+  const [isOpen18, setIsOpen18] = useState(false);
+  const [circleColor18, setCircleColor18] = useState("transparent");
+  const handleDropdownToggle18 = (event) => {
+    setIsOpen18(!isOpen18);
+    setCircleColor18(prevColor => prevColor === "transparent" ? "yellow" : "transparent");
+  };
+  const [isOpen19, setIsOpen19] = useState(false);
+  const [circleColor19, setCircleColor19] = useState("transparent");
+  const handleDropdownToggle19 = (event) => {
+    setIsOpen19(!isOpen19);
+    setCircleColor19(prevColor => prevColor === "transparent" ? "yellow" : "transparent");
+  };
+  const [isOpen20, setIsOpen20] = useState(false);
+  const [circleColor20, setCircleColor20] = useState("transparent");
+  const handleDropdownToggle20 = (event) => {
+    setIsOpen20(!isOpen20);
+    setCircleColor20(prevColor => prevColor === "transparent" ? "yellow" : "transparent");
+  };
+
+
+  const handleDocumentClick = (event) => {
+  // Check if the clicked element is within a select element
+  const isWithinSelect = event.target.closest(".dropdown-menu-content");
+
+  // Reset the circle colors to transparent if the click was not within a dropdown or select
+  if (!isWithinSelect) {
+    setCircleColor0("transparent");
+    setCircleColor1("transparent");
+    setCircleColor2("transparent");
+    setCircleColor3("transparent");
+    setCircleColor4("transparent");
+    setCircleColor5("transparent");
+    setCircleColor6("transparent");
+    setCircleColor7("transparent");
+    setCircleColor8("transparent");
+    setCircleColor9("transparent");
+    setCircleColor10("transparent");
+    setCircleColor11("transparent");
+    setCircleColor12("transparent");
+    setCircleColor13("transparent");
+    setCircleColor14("transparent");
+    setCircleColor15("transparent");
+    setCircleColor16("transparent");
+    setCircleColor17("transparent");
+    setCircleColor18("transparent");
+    setCircleColor19("transparent");
+    setCircleColor20("transparent");
+  }
+  };
+
+  useEffect(() => {
+    document.addEventListener("click", handleDocumentClick);
+
+    return () => {
+      document.removeEventListener("click", handleDocumentClick);
+    };
+  }, []);
 
   useEffect(() => {
     let isMounted = true;
@@ -86,45 +252,45 @@ export const RespSetupPage = () => {
       <div style={{position: "relative", display: "inline-block"}}>
       <img src="https://i.imgur.com/LBt41I0.png" alt=""/>
 
-      {/* 5 Major Landmarks */}
-      <div className="nodeHeart" style={{ top: "140px", left: "70px" }}></div>
-      <div className="nodeHeart" style={{ top: "140px", left: "100px" }}></div>
-      <div className="nodeHeart" style={{ top: "157px", left: "105px" }}></div>
-      <div className="nodeHeart" style={{ top: "175px", left: "108px" }}></div>
+      {/* Major Landmarks */}
+      <div className="nodeHeart" style={{ top: "140px", left: "70px", backgroundColor: circleColor3 }}></div>
+      <div className="nodeHeart" style={{ top: "140px", left: "100px", backgroundColor: circleColor2 }}></div>
+      <div className="nodeHeart" style={{ top: "157px", left: "105px", backgroundColor: circleColor11 }}></div>
+      <div className="nodeHeart" style={{ top: "175px", left: "108px", backgroundColor: circleColor10 }}></div>
       
       
       {/* Breathing */}
         {/* Front */}
-      <div className="nodeBreathing" style={{ top: "100px", left: "73px" }}></div>
-      <div className="nodeBreathing" style={{ top: "100px", left: "96px" }}></div>
-      <div className="nodeBreathing" style={{ top: "250px", left: "154px" }}></div>
-      <div className="nodeBreathing" style={{ top: "250px", left: "15px" }}></div>
-      <div className="nodeBreathing" style={{ top: "190px", left: "105px" }}></div>
-      <div className="nodeBreathing" style={{ top: "190px", left: "65px" }}></div>
-      <div className="nodeBreathing" style={{ top: "150px", left: "115px" }}></div>
-      <div className="nodeBreathing" style={{ top: "150px", left: "55px" }}></div>
+      <div className="nodeBreathing" style={{ top: "100px", left: "73px", backgroundColor: circleColor5 }}></div>
+      <div className="nodeBreathing" style={{ top: "100px", left: "96px", backgroundColor: circleColor4 }}></div>
+      {/* <div className="nodeBreathing" style={{ top: "250px", left: "154px", backgroundColor: circleColor3 }}></div> */}
+      {/* <div className="nodeBreathing" style={{ top: "250px", left: "15px", backgroundColor: circleColor3 }}></div> */}
+      <div className="nodeBreathing" style={{ top: "190px", left: "105px", backgroundColor: circleColor17 }}></div>
+      <div className="nodeBreathing" style={{ top: "190px", left: "65px", backgroundColor: circleColor18 }}></div>
+      <div className="nodeBreathing" style={{ top: "150px", left: "115px", backgroundColor: circleColor8 }}></div>
+      <div className="nodeBreathing" style={{ top: "150px", left: "55px", backgroundColor: circleColor13 }}></div>
 
         {/* Sides */}
-      <div className="nodeBreathingSide" style={{ top: "150px", left: "260px" }}></div>
-      <div className="nodeBreathingSide" style={{ top: "170px", left: "265px" }}></div>
+      <div className="nodeBreathingSide" style={{ top: "150px", left: "260px", backgroundColor: circleColor7 }}></div>
+      <div className="nodeBreathingSide" style={{ top: "170px", left: "265px", backgroundColor: circleColor20 }}></div>
 
-      <div className="nodeBreathingSide" style={{ top: "160px", left: "45px" }}></div>
+      <div className="nodeBreathingSide" style={{ top: "160px", left: "45px", backgroundColor: circleColor14 }}></div>
 
-      <div className="nodeBreathingSide" style={{ top: "150px", left: "345px" }}></div>
-      <div className="nodeBreathingSide" style={{ top: "170px", left: "340px" }}></div>
+      <div className="nodeBreathingSide" style={{ top: "150px", left: "345px", backgroundColor: circleColor6 }}></div>
+      <div className="nodeBreathingSide" style={{ top: "170px", left: "340px", backgroundColor: circleColor19 }}></div>
 
         {/* Back */}
-      <div className="nodeBreathing" style={{ top: "120px", left: "320px" }}></div>
-      <div className="nodeBreathing" style={{ top: "120px", left: "282px" }}></div>
-      <div className="nodeBreathing" style={{ top: "155px", left: "315px" }}></div>
-      <div className="nodeBreathing" style={{ top: "155px", left: "287px" }}></div>
-      <div className="nodeBreathing" style={{ top: "190px", left: "320px" }}></div>
-      <div className="nodeBreathing" style={{ top: "190px", left: "282px" }}></div>
+      <div className="nodeBreathing" style={{ top: "120px", left: "320px", backgroundColor: circleColor1 }}></div>
+      <div className="nodeBreathing" style={{ top: "120px", left: "282px", backgroundColor: circleColor0 }}></div>
+      <div className="nodeBreathing" style={{ top: "155px", left: "315px", backgroundColor: circleColor9 }}></div>
+      <div className="nodeBreathing" style={{ top: "155px", left: "287px", backgroundColor: circleColor12 }}></div>
+      <div className="nodeBreathing" style={{ top: "190px", left: "320px", backgroundColor: circleColor16 }}></div>
+      <div className="nodeBreathing" style={{ top: "190px", left: "282px", backgroundColor: circleColor15 }}></div>
       
 
     </div>
 
-      </div>
+    </div>
       <div style={{ width: "20%" }}>
         {/* Second column content */
       <div className="dropdown-menu-container">
