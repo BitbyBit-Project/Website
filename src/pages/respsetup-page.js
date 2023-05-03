@@ -159,7 +159,7 @@ export const RespSetupPage = () => {
         
         <div className="dropdown-title">BL A hNode:</div>
         <select className="dropdown-menu-content" onChange={(e) => set2(e.target.value)}>
-          <option value="">Normal S1 S2</option>
+          <option value="1">Normal S1 S2</option>
           <option value="2">S1 Only</option>
           <option value="0">Normal 1 2</option>
           
@@ -171,7 +171,7 @@ export const RespSetupPage = () => {
         
         <div className="dropdown-title">BR A hNode:</div>
         <select className="dropdown-menu-content" onChange={(e) => set3(e.target.value)}>
-          <option value="">Normal S1 S2</option>
+        <option value="1">Normal S1 S2</option>
           <option value="2">S1 Only</option>
           <option value="0">Normal 1 2</option>
           
@@ -275,7 +275,7 @@ export const RespSetupPage = () => {
         
         <div className="dropdown-title">Apex A hNode:</div>
         <select className="dropdown-menu-content" onChange={(e) => set10(e.target.value)}>
-          <option value="">Normal S1 S2 </option>
+        <option value="1">Normal S1 S2</option>
           <option value="2">S1 Only</option>
           <option value="0">Normal 1 2</option>
           
@@ -287,7 +287,7 @@ export const RespSetupPage = () => {
         
         <div className="dropdown-title">LL A hNode:</div>
         <select className="dropdown-menu-content" onChange={(e) => set11(e.target.value)}>
-          <option value="">Normal S1 S2 </option>
+        <option value="1">Normal S1 S2</option>
           <option value="2">S1 Only</option>
           <option value="0">Normal 1 2</option>
           
