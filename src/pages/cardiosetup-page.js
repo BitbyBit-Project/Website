@@ -111,9 +111,9 @@ export const CardioSetupPage = () => {
 
         <div className="dropdown-title">LSB 2IS pNode:</div>
         <select className="dropdown-menu-content" onChange={(e) => set5(e.target.value)}>
-          <option value="2">S1 Only</option>
-          <option value="0">Normal 1 2</option>
-          <option value="1">Normal S1 S2</option>
+          <option value="0">S1 Only</option>
+          <option value="1">Normal 1 2</option>
+          <option value="2">Normal S1 S2</option>
           
           <option value="3">S3 Only</option>
           <option value="4">S3 S4</option>
