@@ -131,7 +131,7 @@ export const RespSetupPage = () => {
         <div className="dropdown-title">LUL P bNode:</div>
         <div className="dropdown-menu">
         <select className="dropdown-menu-content" onChange={(e) => set0(e.target.value)}>
-          <option value="" disabled selected>LUL P bNode </option>
+          
           <option value="0">Bronchial</option>
           <option value="1">Crackles-Coarse</option>
           <option value="2">Crackles-Fine</option>
@@ -145,7 +145,7 @@ export const RespSetupPage = () => {
 
         <div className="dropdown-title">RUL P bNode:</div>
         <select className="dropdown-menu-content" onChange={(e) => set1(e.target.value)}>
-          <option value="" disabled selected>RUL P bNode </option>
+          
           <option value="0">Bronchial</option>
           <option value="1">Crackles-Coarse</option>
           <option value="2">Crackles-Fine</option>
@@ -159,35 +159,31 @@ export const RespSetupPage = () => {
         
         <div className="dropdown-title">BL A hNode:</div>
         <select className="dropdown-menu-content" onChange={(e) => set2(e.target.value)}>
-          <option value="" disabled selected>RUL P bNode </option>
-          <option value="0">Bronchial</option>
-          <option value="1">Crackles-Coarse</option>
-          <option value="2">Crackles-Fine</option>
-          <option value="3">Diminished</option>
-          <option value="4">Expiratory Wheezing</option>
-          <option value="5">Pleural Rub</option>
-          <option value="6">Rhonchi</option>
-          <option value="7">Stridor</option>
-          <option value="8">Vesicular</option>
+          <option value="">Normal S1 S2</option>
+          <option value="2">S1 Only</option>
+          <option value="0">Normal 1 2</option>
+          
+          
+          <option value="3">S3 Only</option>
+          <option value="4">S3 S4</option>
+          <option value="5">S4 Only</option>
         </select>
         
         <div className="dropdown-title">BR A hNode:</div>
         <select className="dropdown-menu-content" onChange={(e) => set3(e.target.value)}>
-          <option value="" disabled selected>RUL P bNode </option>
-          <option value="0">Bronchial</option>
-          <option value="1">Crackles-Coarse</option>
-          <option value="2">Crackles-Fine</option>
-          <option value="3">Diminished</option>
-          <option value="4">Expiratory Wheezing</option>
-          <option value="5">Pleural Rub</option>
-          <option value="6">Rhonchi</option>
-          <option value="7">Stridor</option>
-          <option value="8">Vesicular</option>
+          <option value="">Normal S1 S2</option>
+          <option value="2">S1 Only</option>
+          <option value="0">Normal 1 2</option>
+          
+          
+          <option value="3">S3 Only</option>
+          <option value="4">S3 S4</option>
+          <option value="5">S4 Only</option>
         </select>
         
         <div className="dropdown-title">LUL A bNode:</div>
         <select className="dropdown-menu-content" onChange={(e) => set4(e.target.value)}>
-          <option value="" disabled selected>RUL P bNode </option>
+          
           <option value="0">Bronchial</option>
           <option value="1">Crackles-Coarse</option>
           <option value="2">Crackles-Fine</option>
@@ -201,7 +197,7 @@ export const RespSetupPage = () => {
         
         <div className="dropdown-title">RUL A bNode:</div>
         <select className="dropdown-menu-content" onChange={(e) => set5(e.target.value)}>
-          <option value="" disabled selected>RUL P bNode </option>
+          
           <option value="0">Bronchial</option>
           <option value="1">Crackles-Coarse</option>
           <option value="2">Crackles-Fine</option>
@@ -215,7 +211,7 @@ export const RespSetupPage = () => {
         
         <div className="dropdown-title">RUL L bNode:</div>
         <select className="dropdown-menu-content" onChange={(e) => set6(e.target.value)}>
-          <option value="" disabled selected>RUL P bNode </option>
+          
           <option value="0">Bronchial</option>
           <option value="1">Crackles-Coarse</option>
           <option value="2">Crackles-Fine</option>
@@ -237,7 +233,7 @@ export const RespSetupPage = () => {
         <div className="dropdown-title">LUL L bNode:</div>
         <div className="dropdown-menu">
         <select className="dropdown-menu-content" onChange={(e) => set7(e.target.value)}>
-          <option value="" disabled selected>LUL P bNode </option>
+          
           <option value="0">Bronchial</option>
           <option value="1">Crackles-Coarse</option>
           <option value="2">Crackles-Fine</option>
@@ -251,7 +247,7 @@ export const RespSetupPage = () => {
 
         <div className="dropdown-title">LML A bNode:</div>
         <select className="dropdown-menu-content" onChange={(e) => set8(e.target.value)}>
-          <option value="" disabled selected>RUL P bNode </option>
+          
           <option value="0">Bronchial</option>
           <option value="1">Crackles-Coarse</option>
           <option value="2">Crackles-Fine</option>
@@ -265,7 +261,7 @@ export const RespSetupPage = () => {
         
         <div className="dropdown-title">RML P bNode:</div>
         <select className="dropdown-menu-content" onChange={(e) => set9(e.target.value)}>
-          <option value="" disabled selected>RUL P bNode </option>
+          
           <option value="0">Bronchial</option>
           <option value="1">Crackles-Coarse</option>
           <option value="2">Crackles-Fine</option>
@@ -279,35 +275,31 @@ export const RespSetupPage = () => {
         
         <div className="dropdown-title">Apex A hNode:</div>
         <select className="dropdown-menu-content" onChange={(e) => set10(e.target.value)}>
-          <option value="" disabled selected>RUL P bNode </option>
-          <option value="0">Bronchial</option>
-          <option value="1">Crackles-Coarse</option>
-          <option value="2">Crackles-Fine</option>
-          <option value="3">Diminished</option>
-          <option value="4">Expiratory Wheezing</option>
-          <option value="5">Pleural Rub</option>
-          <option value="6">Rhonchi</option>
-          <option value="7">Stridor</option>
-          <option value="8">Vesicular</option>
+          <option value="">Normal S1 S2 </option>
+          <option value="2">S1 Only</option>
+          <option value="0">Normal 1 2</option>
+          
+          
+          <option value="3">S3 Only</option>
+          <option value="4">S3 S4</option>
+          <option value="5">S4 Only</option>
         </select>
         
         <div className="dropdown-title">LL A hNode:</div>
         <select className="dropdown-menu-content" onChange={(e) => set11(e.target.value)}>
-          <option value="" disabled selected>RUL P bNode </option>
-          <option value="0">Bronchial</option>
-          <option value="1">Crackles-Coarse</option>
-          <option value="2">Crackles-Fine</option>
-          <option value="3">Diminished</option>
-          <option value="4">Expiratory Wheezing</option>
-          <option value="5">Pleural Rub</option>
-          <option value="6">Rhonchi</option>
-          <option value="7">Stridor</option>
-          <option value="8">Vesicular</option>
+          <option value="">Normal S1 S2 </option>
+          <option value="2">S1 Only</option>
+          <option value="0">Normal 1 2</option>
+          
+          
+          <option value="3">S3 Only</option>
+          <option value="4">S3 S4</option>
+          <option value="5">S4 Only</option>
         </select>
         
         <div className="dropdown-title">LML P bNode:</div>
         <select className="dropdown-menu-content" onChange={(e) => set12(e.target.value)}>
-          <option value="" disabled selected>RUL P bNode </option>
+          
           <option value="0">Bronchial</option>
           <option value="1">Crackles-Coarse</option>
           <option value="2">Crackles-Fine</option>
@@ -321,7 +313,7 @@ export const RespSetupPage = () => {
         
         <div className="dropdown-title">RML A bNode:</div>
         <select className="dropdown-menu-content" onChange={(e) => set13(e.target.value)}>
-          <option value="" disabled selected>RUL P bNode </option>
+          
           <option value="0">Bronchial</option>
           <option value="1">Crackles-Coarse</option>
           <option value="2">Crackles-Fine</option>
@@ -343,7 +335,7 @@ export const RespSetupPage = () => {
         <div className="dropdown-title">RML L bNode:</div>
         <div className="dropdown-menu">
         <select className="dropdown-menu-content" onChange={(e) => set14(e.target.value)}>
-          <option value="" disabled selected>LUL P bNode </option>
+          
           <option value="0">Bronchial</option>
           <option value="1">Crackles-Coarse</option>
           <option value="2">Crackles-Fine</option>
@@ -357,12 +349,12 @@ export const RespSetupPage = () => {
 
         <div className="dropdown-title">LLL P bNode:</div>
         <select className="dropdown-menu-content" onChange={(e) => set15(e.target.value)}>
-          <option value="" disabled selected>RUL P bNode </option>
+        <option value="4">Expiratory Wheezing</option>
           <option value="0">Bronchial</option>
           <option value="1">Crackles-Coarse</option>
           <option value="2">Crackles-Fine</option>
           <option value="3">Diminished</option>
-          <option value="4">Expiratory Wheezing</option>
+          
           <option value="5">Pleural Rub</option>
           <option value="6">Rhonchi</option>
           <option value="7">Stridor</option>
@@ -371,7 +363,7 @@ export const RespSetupPage = () => {
         
         <div className="dropdown-title">RLL P bNode:</div>
         <select className="dropdown-menu-content" onChange={(e) => set16(e.target.value)}>
-          <option value="" disabled selected>RUL P bNode </option>
+          
           <option value="0">Bronchial</option>
           <option value="1">Crackles-Coarse</option>
           <option value="2">Crackles-Fine</option>
@@ -385,12 +377,12 @@ export const RespSetupPage = () => {
         
         <div className="dropdown-title">LLL A bNode:</div>
         <select className="dropdown-menu-content" onChange={(e) => set17(e.target.value)}>
-          <option value="" disabled selected>RUL P bNode </option>
+        <option value="4">Expiratory Wheezing</option>
           <option value="0">Bronchial</option>
           <option value="1">Crackles-Coarse</option>
           <option value="2">Crackles-Fine</option>
           <option value="3">Diminished</option>
-          <option value="4">Expiratory Wheezing</option>
+          
           <option value="5">Pleural Rub</option>
           <option value="6">Rhonchi</option>
           <option value="7">Stridor</option>
@@ -399,7 +391,7 @@ export const RespSetupPage = () => {
         
         <div className="dropdown-title">RLL A bNode:</div>
         <select className="dropdown-menu-content" onChange={(e) => set18(e.target.value)}>
-          <option value="" disabled selected>RUL P bNode </option>
+          
           <option value="0">Bronchial</option>
           <option value="1">Crackles-Coarse</option>
           <option value="2">Crackles-Fine</option>
@@ -413,7 +405,7 @@ export const RespSetupPage = () => {
         
         <div className="dropdown-title">RLL L bNode:</div>
         <select className="dropdown-menu-content" onChange={(e) => set19(e.target.value)}>
-          <option value="" disabled selected>RUL P bNode </option>
+          
           <option value="0">Bronchial</option>
           <option value="1">Crackles-Coarse</option>
           <option value="2">Crackles-Fine</option>
@@ -427,12 +419,12 @@ export const RespSetupPage = () => {
         
         <div className="dropdown-title">LLL L bNode:</div>
         <select className="dropdown-menu-content" onChange={(e) => set20(e.target.value)}>
-          <option value="" disabled selected>RUL P bNode </option>
+          <option value="4">Expiratory Wheezing</option>
           <option value="0">Bronchial</option>
           <option value="1">Crackles-Coarse</option>
           <option value="2">Crackles-Fine</option>
           <option value="3">Diminished</option>
-          <option value="4">Expiratory Wheezing</option>
+          
           <option value="5">Pleural Rub</option>
           <option value="6">Rhonchi</option>
           <option value="7">Stridor</option>

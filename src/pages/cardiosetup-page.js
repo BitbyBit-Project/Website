@@ -99,7 +99,7 @@ export const CardioSetupPage = () => {
         <div className="dropdown-title">RSB 2IS pNode:</div>
         <div className="dropdown-menu">
           <select className="dropdown-menu-content" onChange={(e) => set4(e.target.value)}>
-          <option value="" disabled selected>Heart_Normal_1_2 (v2)</option>
+          
             <option value="0">Normal 1 2</option>
             <option value="1">Normal S1 S2</option>
             <option value="2">S1 Only</option>
@@ -111,10 +111,10 @@ export const CardioSetupPage = () => {
 
         <div className="dropdown-title">LSB 2IS pNode:</div>
         <select className="dropdown-menu-content" onChange={(e) => set5(e.target.value)}>
-          <option value="" disabled selected>Heart_S1_only</option>
+          <option value="2">S1 Only</option>
           <option value="0">Normal 1 2</option>
           <option value="1">Normal S1 S2</option>
-          <option value="2">S1 Only</option>
+          
           <option value="3">S3 Only</option>
           <option value="4">S3 S4</option>
           <option value="5">S4 Only</option>
@@ -122,8 +122,8 @@ export const CardioSetupPage = () => {
         
         <div className="dropdown-title">LSB 3IS pNode:</div>
         <select className="dropdown-menu-content" onChange={(e) => set6(e.target.value)}>
-        <option value="" disabled selected>Heart_Normal_1_2 (v2)</option>
           <option value="0">Normal 1 2</option>
+          
           <option value="1">Normal S1 S2</option>
           <option value="2">S1 Only</option>
           <option value="3">S3 Only</option>
@@ -133,8 +133,8 @@ export const CardioSetupPage = () => {
         
         <div className="dropdown-title">LSB 4IS pNode:</div>
         <select className="dropdown-menu-content" onChange={(e) => set7(e.target.value)}>
-        <option value="" disabled selected>Heart_Normal_1_2 (v2)</option>
-          <option value="0">Normal 1 2</option>
+         <option value="0">Normal 1 2</option>
+          
           <option value="1">Normal S1 S2</option>
           <option value="2">S1 Only</option>
           <option value="3">S3 Only</option>
@@ -144,8 +144,8 @@ export const CardioSetupPage = () => {
         
         <div className="dropdown-title">LSB 5IS pNode:</div>
         <select className="dropdown-menu-content" onChange={(e) => set8(e.target.value)}>
-          <option value="" disabled selected>Heart_Normal_1_2 (v2)</option>
-          <option value="0">Normal 1 2</option>
+        <option value="0">Normal 1 2</option>
+          
           <option value="1">Normal S1 S2</option>
           <option value="2">S1 Only</option>
           <option value="3">S3 Only</option>
