@@ -296,7 +296,7 @@ export const RespSetupPage = () => {
       <div className="dropdown-menu-container">
         <div className="dropdown-title">LUL P bNode:</div>
         <div className="dropdown-menu">
-        <select className="dropdown-menu-content" onChange={(e) => set0(e.target.value)}>
+        <select className="dropdown-menu-content" onClick={handleDropdownToggle0} onChange={(e) => set0(e.target.value)}>
           
           <option value="0">Bronchial</option>
           <option value="1">Crackles-Coarse</option>
@@ -310,7 +310,7 @@ export const RespSetupPage = () => {
         </select>
 
         <div className="dropdown-title">RUL P bNode:</div>
-        <select className="dropdown-menu-content" onChange={(e) => set1(e.target.value)}>
+        <select className="dropdown-menu-content" onClick={handleDropdownToggle1} onChange={(e) => set1(e.target.value)}>
           
           <option value="0">Bronchial</option>
           <option value="1">Crackles-Coarse</option>
@@ -324,7 +324,7 @@ export const RespSetupPage = () => {
         </select>
         
         <div className="dropdown-title">BL A hNode:</div>
-        <select className="dropdown-menu-content" onChange={(e) => set2(e.target.value)}>
+        <select className="dropdown-menu-content" onClick={handleDropdownToggle2} onChange={(e) => set2(e.target.value)}>
           <option value="1">Normal S1 S2</option>
           <option value="2">S1 Only</option>
           <option value="0">Normal 1 2</option>
@@ -336,7 +336,7 @@ export const RespSetupPage = () => {
         </select>
         
         <div className="dropdown-title">BR A hNode:</div>
-        <select className="dropdown-menu-content" onChange={(e) => set3(e.target.value)}>
+        <select className="dropdown-menu-content" onClick={handleDropdownToggle3} onChange={(e) => set3(e.target.value)}>
         <option value="1">Normal S1 S2</option>
           <option value="2">S1 Only</option>
           <option value="0">Normal 1 2</option>
@@ -348,7 +348,7 @@ export const RespSetupPage = () => {
         </select>
         
         <div className="dropdown-title">LUL A bNode:</div>
-        <select className="dropdown-menu-content" onChange={(e) => set4(e.target.value)}>
+        <select className="dropdown-menu-content" onClick={handleDropdownToggle4} onChange={(e) => set4(e.target.value)}>
           
           <option value="0">Bronchial</option>
           <option value="1">Crackles-Coarse</option>
@@ -362,7 +362,7 @@ export const RespSetupPage = () => {
         </select>
         
         <div className="dropdown-title">RUL A bNode:</div>
-        <select className="dropdown-menu-content" onChange={(e) => set5(e.target.value)}>
+        <select className="dropdown-menu-content" onClick={handleDropdownToggle5} onChange={(e) => set5(e.target.value)}>
           
           <option value="0">Bronchial</option>
           <option value="1">Crackles-Coarse</option>
@@ -376,7 +376,7 @@ export const RespSetupPage = () => {
         </select>
         
         <div className="dropdown-title">RUL L bNode:</div>
-        <select className="dropdown-menu-content" onChange={(e) => set6(e.target.value)}>
+        <select className="dropdown-menu-content" onClick={handleDropdownToggle6} onChange={(e) => set6(e.target.value)}>
           
           <option value="0">Bronchial</option>
           <option value="1">Crackles-Coarse</option>
@@ -398,7 +398,7 @@ export const RespSetupPage = () => {
       <div className="dropdown-menu-container">
         <div className="dropdown-title">LUL L bNode:</div>
         <div className="dropdown-menu">
-        <select className="dropdown-menu-content" onChange={(e) => set7(e.target.value)}>
+        <select className="dropdown-menu-content" onClick={handleDropdownToggle7} onChange={(e) => set7(e.target.value)}>
           
           <option value="0">Bronchial</option>
           <option value="1">Crackles-Coarse</option>
@@ -412,7 +412,7 @@ export const RespSetupPage = () => {
         </select>
 
         <div className="dropdown-title">LML A bNode:</div>
-        <select className="dropdown-menu-content" onChange={(e) => set8(e.target.value)}>
+        <select className="dropdown-menu-content" onClick={handleDropdownToggle8} onChange={(e) => set8(e.target.value)}>
           
           <option value="0">Bronchial</option>
           <option value="1">Crackles-Coarse</option>
@@ -426,7 +426,7 @@ export const RespSetupPage = () => {
         </select>
         
         <div className="dropdown-title">RML P bNode:</div>
-        <select className="dropdown-menu-content" onChange={(e) => set9(e.target.value)}>
+        <select className="dropdown-menu-content" onClick={handleDropdownToggle9} onChange={(e) => set9(e.target.value)}>
           
           <option value="0">Bronchial</option>
           <option value="1">Crackles-Coarse</option>
@@ -440,7 +440,7 @@ export const RespSetupPage = () => {
         </select>
         
         <div className="dropdown-title">Apex A hNode:</div>
-        <select className="dropdown-menu-content" onChange={(e) => set10(e.target.value)}>
+        <select className="dropdown-menu-content" onClick={handleDropdownToggle10} onChange={(e) => set10(e.target.value)}>
         <option value="1">Normal S1 S2</option>
           <option value="2">S1 Only</option>
           <option value="0">Normal 1 2</option>
@@ -452,7 +452,7 @@ export const RespSetupPage = () => {
         </select>
         
         <div className="dropdown-title">LL A hNode:</div>
-        <select className="dropdown-menu-content" onChange={(e) => set11(e.target.value)}>
+        <select className="dropdown-menu-content" onClick={handleDropdownToggle11} onChange={(e) => set11(e.target.value)}>
         <option value="1">Normal S1 S2</option>
           <option value="2">S1 Only</option>
           <option value="0">Normal 1 2</option>
@@ -464,7 +464,7 @@ export const RespSetupPage = () => {
         </select>
         
         <div className="dropdown-title">LML P bNode:</div>
-        <select className="dropdown-menu-content" onChange={(e) => set12(e.target.value)}>
+        <select className="dropdown-menu-content" onClick={handleDropdownToggle12} onChange={(e) => set12(e.target.value)}>
           
           <option value="0">Bronchial</option>
           <option value="1">Crackles-Coarse</option>
@@ -478,7 +478,7 @@ export const RespSetupPage = () => {
         </select>
         
         <div className="dropdown-title">RML A bNode:</div>
-        <select className="dropdown-menu-content" onChange={(e) => set13(e.target.value)}>
+        <select className="dropdown-menu-content" onClick={handleDropdownToggle13} onChange={(e) => set13(e.target.value)}>
           
           <option value="0">Bronchial</option>
           <option value="1">Crackles-Coarse</option>
@@ -500,7 +500,7 @@ export const RespSetupPage = () => {
       <div className="dropdown-menu-container">
         <div className="dropdown-title">RML L bNode:</div>
         <div className="dropdown-menu">
-        <select className="dropdown-menu-content" onChange={(e) => set14(e.target.value)}>
+        <select className="dropdown-menu-content" onClick={handleDropdownToggle14} onChange={(e) => set14(e.target.value)}>
           
           <option value="0">Bronchial</option>
           <option value="1">Crackles-Coarse</option>
@@ -514,7 +514,7 @@ export const RespSetupPage = () => {
         </select>
 
         <div className="dropdown-title">LLL P bNode:</div>
-        <select className="dropdown-menu-content" onChange={(e) => set15(e.target.value)}>
+        <select className="dropdown-menu-content" onClick={handleDropdownToggle15} onChange={(e) => set15(e.target.value)}>
         <option value="4">Expiratory Wheezing</option>
           <option value="0">Bronchial</option>
           <option value="1">Crackles-Coarse</option>
@@ -528,7 +528,7 @@ export const RespSetupPage = () => {
         </select>
         
         <div className="dropdown-title">RLL P bNode:</div>
-        <select className="dropdown-menu-content" onChange={(e) => set16(e.target.value)}>
+        <select className="dropdown-menu-content" onClick={handleDropdownToggle16} onChange={(e) => set16(e.target.value)}>
           
           <option value="0">Bronchial</option>
           <option value="1">Crackles-Coarse</option>
@@ -542,7 +542,7 @@ export const RespSetupPage = () => {
         </select>
         
         <div className="dropdown-title">LLL A bNode:</div>
-        <select className="dropdown-menu-content" onChange={(e) => set17(e.target.value)}>
+        <select className="dropdown-menu-content" onClick={handleDropdownToggle17} onChange={(e) => set17(e.target.value)}>
         <option value="4">Expiratory Wheezing</option>
           <option value="0">Bronchial</option>
           <option value="1">Crackles-Coarse</option>
@@ -556,7 +556,7 @@ export const RespSetupPage = () => {
         </select>
         
         <div className="dropdown-title">RLL A bNode:</div>
-        <select className="dropdown-menu-content" onChange={(e) => set18(e.target.value)}>
+        <select className="dropdown-menu-content" onClick={handleDropdownToggle18} onChange={(e) => set18(e.target.value)}>
           
           <option value="0">Bronchial</option>
           <option value="1">Crackles-Coarse</option>
@@ -570,7 +570,7 @@ export const RespSetupPage = () => {
         </select>
         
         <div className="dropdown-title">RLL L bNode:</div>
-        <select className="dropdown-menu-content" onChange={(e) => set19(e.target.value)}>
+        <select className="dropdown-menu-content" onClick={handleDropdownToggle19} onChange={(e) => set19(e.target.value)}>
           
           <option value="0">Bronchial</option>
           <option value="1">Crackles-Coarse</option>
@@ -584,7 +584,7 @@ export const RespSetupPage = () => {
         </select>
         
         <div className="dropdown-title">LLL L bNode:</div>
-        <select className="dropdown-menu-content" onChange={(e) => set20(e.target.value)}>
+        <select className="dropdown-menu-content" onClick={handleDropdownToggle20} onChange={(e) => set20(e.target.value)}>
           <option value="4">Expiratory Wheezing</option>
           <option value="0">Bronchial</option>
           <option value="1">Crackles-Coarse</option>
