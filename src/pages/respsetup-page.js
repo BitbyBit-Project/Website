@@ -169,6 +169,21 @@ export const RespSetupPage = () => {
     setCircleColor3("transparent");
     setCircleColor4("transparent");
     setCircleColor5("transparent");
+    setCircleColor6("transparent");
+    setCircleColor7("transparent");
+    setCircleColor8("transparent");
+    setCircleColor9("transparent");
+    setCircleColor10("transparent");
+    setCircleColor11("transparent");
+    setCircleColor12("transparent");
+    setCircleColor13("transparent");
+    setCircleColor14("transparent");
+    setCircleColor15("transparent");
+    setCircleColor16("transparent");
+    setCircleColor17("transparent");
+    setCircleColor18("transparent");
+    setCircleColor19("transparent");
+    setCircleColor20("transparent");
   }
   };
 
