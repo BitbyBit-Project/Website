@@ -15,7 +15,6 @@ export const NavBarTabs = () => {
       {isAuthenticated && (
         <>
           <NavBarTab path="/profile" label="Profile" />
-          <NavBarTab path="/admin" label="Admin" />
           <NavBarTab path="/gradesheet" label="Grade Sheet" />
           <NavBarTab path="/cardiosetup" label="Cardio Setup" />
           <NavBarTab path="/respsetup" label="Resp Setup" />
