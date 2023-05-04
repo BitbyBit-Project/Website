@@ -41,8 +41,8 @@ export const App = () => {
       <Route path="/about" element={<AboutPage />} />
       <Route path="/contact" element={<ContactPage />} />
       <Route path="*" element={<NotFoundPage />} />
-      <Route path="/cardiosetup" element={<CardioSetupPage />} />
-      <Route path="/respsetup" element={<RespSetupPage />} />
+      <Route path="/cardiosetup" element={<AuthenticationGuard component={CardioSetupPage} />} />
+      <Route path="/respsetup" element={<AuthenticationGuard component={RespSetupPage} />} />
     </Routes>
   );
 };
