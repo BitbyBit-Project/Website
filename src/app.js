@@ -12,6 +12,7 @@ import { ProtectedPage } from "./pages/protected-page";
 import { PublicPage } from "./pages/resources-page";
 import { AboutPage } from "./pages/about-page";
 import { ContactPage } from "./pages/contact-page";
+import { TechPage } from "./pages/tech-stack";
 import { GradeSheet } from "./pages/grade-sheet";
 import { createTheme } from "@mui/material";
 import { CardioSetupPage } from "./pages/cardiosetup-page";
@@ -39,6 +40,7 @@ export const App = () => {
       <Route path="/admin" element={<AuthenticationGuard component={AdminPage} />} />
       <Route path="/callback" element={<CallbackPage />} />
       <Route path="/about" element={<AboutPage />} />
+      <Route path="/tech" element={<TechPage />} />
       <Route path="/contact" element={<ContactPage />} />
       <Route path="*" element={<NotFoundPage />} />
       <Route path="/cardiosetup" element={<AuthenticationGuard component={CardioSetupPage} />} />

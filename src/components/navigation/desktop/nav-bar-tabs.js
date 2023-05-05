@@ -9,6 +9,7 @@ export const NavBarTabs = () => {
     <div className="nav-bar__tabs">
       
       <NavBarTab path="/about" label="About" />
+      <NavBarTab path="/tech" label="Technology" />
       <NavBarTab path="/contact" label="Contact" />
       <NavBarTab path="/resources" label="Resources" />
 
