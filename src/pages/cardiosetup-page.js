@@ -1,9 +1,8 @@
 import React, { useEffect, useState } from "react";
-//import { CodeSnippet } from "../components/code-snippet";
 import { PageLayout } from "../components/page-layout";
 import { getPublicResource } from "../services/message.service";
 import { Helmet } from "react-helmet";
-
+import CardioQuery from "../components/cardio.js";
 
 
 export const CardioSetupPage = () => {
@@ -105,23 +104,68 @@ export const CardioSetupPage = () => {
     };
   }, []);
 
+  const buildQuery = (set4, set5, set6, set7, set8) => {
+    // Build and return the SQL query string using the dropdown values
+    // For example:
+    const tableName = 'cardiovascular_exam_instuctor_answers'
+    const columns = ['RSB_2IS', 'LSB_2IS', 'LSB_3IS', 'LSB_4IS', 'LSB_5IS' ]
+    const values = [set4, set5, set6, set7, set8]
+
+    const query = `INSERT INTO ${tableName} (${columns.join(', ')}) VALUES (${values.map(v => `'${v}'`).join(', ')})`;
+    return query;
+  };
+
+  const handleQuerySubmit = () => {
+    const query = buildQuery(set4, set5, set6, set7, set8);
+
+    // REPLACE THIS ASAP LOL
+    const DB_HOST = 'nursing-vr.cbogay316a3k.us-west-2.rds.amazonaws.com';
+    const DB_NAME = 'nursing-vr';
+    const DB_USERNAME = 'admin';
+    const DB_PASSWORD = 'nursing1!';
+
+    const connectionString = `mysql://${DB_USERNAME}:${DB_PASSWORD}@${DB_HOST}/${DB_NAME}`;
+
+
+    fetch(`/query?q=${encodeURIComponent(query)}&connectionString=${encodeURIComponent(connectionString)}`)
+    .then(response => {
+      if (!response.ok) {
+        throw new Error('HTTP error! Status: ${response.status}');
+        alert('Connection failed!');
+      }
+      // Show confirmation message here
+      alert('Connection successful!');
+      return response.json();
+    })
+    .then(data => {
+      // Handle response data
+      console.log('Connection successful:', data);
+    })
+    .catch(error => {
+      // Handle error
+      console.error('Connection failed:', error);
+    });
+  }
+
+
   return (
     <PageLayout>
         <Helmet>
-          <title>CardioSetupPage</title>
+          <title>Cardiovascular Exam Setup</title>
         </Helmet>
       <div className="content-layout" 
       >
         <h1 id="page-title" className="content__title">
-        Cardiovascular Exam Setup Page
+        Cardiovascular Exam Setup
         </h1>
-        {/* <div className="content__body">
+        { <div className="content__body">
           <p id="page-description">
             <span>
               <strong>Nodes and stuff</strong>
+              <br></br>
             </span>
           </p>
-        </div> */}
+        </div> }
 
         
       <p>
@@ -150,10 +194,6 @@ export const CardioSetupPage = () => {
     </div>
 
       </div>
-
-
-
-
       
       <div style={{ width: "30%" }}>
         {/* Second column content */
@@ -168,6 +208,7 @@ export const CardioSetupPage = () => {
             <option value="4">S3 S4</option>
             <option value="5">S4 Only</option>
           </select>
+          
 
 
         <div className="dropdown-title">LSB 2IS pNode:</div>
@@ -226,7 +267,7 @@ export const CardioSetupPage = () => {
             <option value="" disabled selected>BPM </option>
             <option value="0">1 million</option>
             <option value="1">2 million</option>
-            <option value="2">90          </option>
+            <option value="2">90</option>
           </select>
           </div>
           </div>
@@ -234,9 +275,9 @@ export const CardioSetupPage = () => {
       </div>
 
 
-
-
-
+      <div>
+      <button onClick={handleQuerySubmit}>Submit Setup</button>
+      </div>
       </div>
       </div>
     </PageLayout>

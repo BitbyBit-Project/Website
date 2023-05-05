@@ -8,10 +8,10 @@ class Database
    // private $conn;
 
     AWS RDS
-    private $host = ".us-west.connect.psdb.cloud";
-    private $db_name = 'NursingVR';
-    private $username = 'n6zfvzbog0zcpp1y3t5k';
-    private $password = 'pscale_pw_eebZyF8tOJPkG5wjfi15GJq9w4ahI2Vae1IoU1dZEMd';
+    private $host = "nursing-vr.cbogay316a3k.us-west-2.rds.amazonaws.com";
+    private $db_name = 'nursing-vr';
+    private $username = 'admin';
+    private $password = 'nursing1!';
     private $conn;
     // DB Connect
     public function connect()
