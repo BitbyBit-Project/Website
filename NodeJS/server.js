@@ -1,6 +1,7 @@
 const express = require('express');
 const bodyParser = require("body-parser");
 const cors = require('cors');
+const port = 3000;
 
 const app=express();
 app.use(bodyParser.json());
@@ -11,7 +12,7 @@ var mysql = require('mysql');
 // create a connection variable with the required details
 var conn = mysql.createConnection({
   host: "nursing-vr.cbogay316a3k.us-west-2.rds.amazonaws.com", // ip address of server running mysql
-  user: "admin", // user name to your mysql database
+  user: "admin", // username to your mysql database
   password: "nursing1!", // corresponding password
   database: "NursingVR" // use the specified database
 });
@@ -20,9 +21,8 @@ var conn = mysql.createConnection({
 conn.connect(function(err) {
   if (err) throw err;
   // if connection is successful
- console.log('connection successful');
+ console.log('Connection successful.');
 });
-
 
 
 app.get('/',(req,res)=>{
@@ -39,13 +39,18 @@ app.post('/submit-query', (req, res) => {
       req.body.set7,
       req.body.set8,
     ];
-    const query = buildQuery(tableName, columns, values);
-    mutation.mutate(query);
-    res.send('Query submitted');
+    const query = `INSERT INTO ${tableName} (${columns.join(", ")}) VALUES (${values.map((value) => `"${value}"`).join(", ")});`;
+    console.log(query);
+    conn.query(query, function (err, result) {
+      if (err) throw err;
+      console.log("Query executed successfully.");
+      res.send("Query received and executed successfully.");
+    });
   });
 
+
 app.listen(3000,()=>{
-  console.log("Server is running on Port 3000");
+  console.log("Server listening at http://localhost:3000");
 })
 
 

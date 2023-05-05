@@ -7,6 +7,7 @@ import CardioQuery from "../components/cardio.js";
 
 const theClient = new QueryClient();
 
+
 export const CardioSetupPage = () => {
   const [node0, set4] = useState("");
   const [node1, set5] = useState("");
@@ -106,37 +107,37 @@ export const CardioSetupPage = () => {
     };
   }, []);
 
+
   function buildQuery(tableName, columns, values) {
-    const query = `UPDATE ${tableName} SET `;
-    const updateValues = columns.map((column, index) => `${column}=${values[index]}`);
-    return query + updateValues.join(", ") + ";";
+    const columnsString = columns.map((column) => `\`${column}\``).join(", ");
+    const valuesString = values.map((value) => `'${value}'`).join(", ");
+    return `INSERT INTO \`NursingVR\`.\`${tableName}\` (${columnsString}) VALUES (${valuesString});`;
   }
   
-
   const handleSubmit = () => {
     const tableName = "cardiovascular_exam_instuctor_answers";
-    const columns = ["RSB_2IS", "LSB_2IS", "LSB_3IS", "LSB_4IS", "LSB_5IS", "BPM"];
-    const values = [set4, set5, set6, set7, set8, setBPM];
+    const columns = ["RSB_2IS", "LSB_2IS", "LSB_3IS", "LSB_4IS", "LSB_5IS"];
+    const values = [set4, set5, set6, set7, set8];
     const query = buildQuery(tableName, columns, values);
   
-    fetch("/submit-query", {
+    fetch("http://localhost:3000/submit-query", {
       method: "POST",
       headers: { "Content-Type": "application/json" },
       body: JSON.stringify({ query }),
     })
-      .then((res) => {
-        if (!res.ok) {
-          throw new Error("Network response was not ok");
-        }
-        return res.json();
-      })
-      .then((data) => {
-        console.log(data);
-      })
-      .catch((error) => {
-        console.error("There was an error!", error);
-      });
-  };
+    .then((res) => {
+      if (!res.ok) {
+        throw new Error("Oh no!!!!! The network response was not ok :(");
+      }
+      return res.json();
+    })
+    .then((data) => {
+      console.log(data);
+    })
+    .catch((error) => {
+      console.error("There was an error!", error);
+    });
+};
   
 
   return (
@@ -191,7 +192,7 @@ export const CardioSetupPage = () => {
         <div className="dropdown-menu-container" >
         <div className="dropdown-title">RSB 2IS pNode:</div>
         <div className="dropdown-menu">
-          <select className="dropdown-menu-content" value={0} onClick={handleDropdownToggle0} onChange={(e) => set4(e.target.value)}>
+          <select className="dropdown-menu-content" onClick={handleDropdownToggle0} onChange={(e) => set4(e.target.value)}>
             <option value="0">Normal 1 2</option>
             <option value="1">Normal S1 S2</option>
             <option value="2">S1 Only</option>
@@ -203,7 +204,7 @@ export const CardioSetupPage = () => {
 
 
         <div className="dropdown-title">LSB 2IS pNode:</div>
-        <select className="dropdown-menu-content" value={0} onClick={handleDropdownToggle1} onChange={(e) => set5(e.target.value)}>
+        <select className="dropdown-menu-content" onClick={handleDropdownToggle1} onChange={(e) => set5(e.target.value)}>
           <option value="2">S1 Only</option>
           <option value="0">Normal 1 2</option>
           <option value="1">Normal S1 S2</option>
@@ -213,7 +214,7 @@ export const CardioSetupPage = () => {
         </select>
         
         <div className="dropdown-title">LSB 3IS pNode:</div>
-        <select className="dropdown-menu-content" value={0} onClick={handleDropdownToggle2} onChange={(e) => set6(e.target.value)}>
+        <select className="dropdown-menu-content" onClick={handleDropdownToggle2} onChange={(e) => set6(e.target.value)}>
           <option value="0">Normal 1 2</option>
           <option value="1">Normal S1 S2</option>
           <option value="2">S1 Only</option>
@@ -223,7 +224,7 @@ export const CardioSetupPage = () => {
         </select>
         
         <div className="dropdown-title">LSB 4IS pNode:</div>
-        <select className="dropdown-menu-content" value={0} onClick={handleDropdownToggle3} onChange={(e) => set7(e.target.value)}>
+        <select className="dropdown-menu-content" onClick={handleDropdownToggle3} onChange={(e) => set7(e.target.value)}>
           <option value="0">Normal 1 2</option>
           <option value="1">Normal S1 S2</option>
           <option value="2">S1 Only</option>
@@ -233,7 +234,7 @@ export const CardioSetupPage = () => {
         </select>
         
         <div className="dropdown-title">LSB 5IS pNode:</div>
-        <select className="dropdown-menu-content" value={0} onClick={handleDropdownToggle4} onChange={(e) => set8(e.target.value)}>
+        <select className="dropdown-menu-content" onClick={handleDropdownToggle4} onChange={(e) => set8(e.target.value)}>
           <option value="0">Normal 1 2</option>
           <option value="1">Normal S1 S2</option>
           <option value="2">S1 Only</option>
@@ -253,7 +254,7 @@ export const CardioSetupPage = () => {
           <div style={{ width: "60%"}}>
           <div className="dropdown-menu">
           <div className="dropdown-title ">BPM:</div>
-          <select className="dropdown-menu-content" value={0} onClick={handleDropdownToggle5} onChange={(e) => setBPM(e.target.value)}>
+          <select className="dropdown-menu-content" onClick={handleDropdownToggle5} onChange={(e) => setBPM(e.target.value)}>
             <option value="" disabled selected>BPM </option>
             <option value="0">1 million</option>
             <option value="1">2 million</option>
