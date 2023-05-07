@@ -9,7 +9,7 @@ import { HomePage } from "./pages/home-page";
 import { NotFoundPage } from "./pages/not-found-page";
 import { ProfilePage } from "./pages/profile-page";
 import { ProtectedPage } from "./pages/protected-page";
-import { PublicPage } from "./pages/resources-page";
+import { ArtifactsPage } from "./pages/artifacts-page";
 import { AboutPage } from "./pages/about-page";
 import { ContactPage } from "./pages/contact-page";
 import { TechPage } from "./pages/tech-stack";
@@ -34,7 +34,7 @@ export const App = () => {
     <Routes>
       <Route path="/" element={<HomePage />} />
       <Route path="/profile" element={<AuthenticationGuard component={ProfilePage} />}/>
-      <Route path="/resources" element={<PublicPage />} />
+      <Route path="/artifacts" element={<ArtifactsPage />} />
       <Route path="/protected" element={<AuthenticationGuard component={ProtectedPage} />} />
       <Route path="/gradesheet" element={<AuthenticationGuard component={GradeSheet} />} />
       <Route path="/admin" element={<AuthenticationGuard component={AdminPage} />} />

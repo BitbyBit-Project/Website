@@ -1,10 +1,10 @@
 import React, { useEffect, useState } from "react";
-//import { CodeSnippet } from "../components/code-snippet";
+import { CodeSnippet } from "../components/code-snippet";
 import { PageLayout } from "../components/page-layout";
 import { getPublicResource } from "../services/message.service";
 import { Helmet } from "react-helmet";
 
-export const PublicPage = () => {
+export const ArtifactsPage = () => {
   const [message, setMessage] = useState("");
 
   useEffect(() => {
@@ -37,16 +37,16 @@ export const PublicPage = () => {
   return (
     <PageLayout>
         <Helmet>
-          <title>Resources Page</title>
+          <title>Project Artifacts Page</title>
         </Helmet>
       <div className="content-layout">
         <h1 id="page-title" className="content__title">
-          Resources
+        Project Artifacts
         </h1>
         <div className="content__body">
           <p id="page-description">
             <span>
-              Our team's work and resources relating to the Nursing Virtual Reality Project!
+              Our team's deliverables and artifacts of the Nursing Virtual Reality Project!
             </span>
           </p>
         </div>
@@ -57,9 +57,9 @@ export const PublicPage = () => {
           <br></br>
         </p>
 
-        <div>
-        <img src={"https:i.imgur.com/8bJY5e4.png"} width="1103" 
-     height="1500" alt="Nursing Virtual Reality Senior Design Poster" />
+        <div className="content__body">
+          <p>Nursing Virtual Reality Senior Design Poster</p>
+          <img src={"https:i.imgur.com/8bJY5e4.png"} width="100%" height="90%" alt="Nursing Virtual Reality Senior Design Poster" />
         </div>
 
         <p>
@@ -95,10 +95,10 @@ export const PublicPage = () => {
        
 
             <div class="column">
-
+              
               <img src = {"https://i.imgur.com/hVyuGT6.png"} width = "40" height = "40" alt = "VSCode" />
               <span>Visual Studio Code    </span>
-            
+
               <img src = {"https://i.imgur.com/aXnDfLc.png"} width = "40" height = "40" alt = "Unity" />
               <span>Unity   </span>
 

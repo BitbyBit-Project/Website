@@ -1,7 +1,7 @@
-//import React, { useEffect, useState } from "react";
-//import { CodeSnippet } from "../components/code-snippet";
+import React, { useEffect, useState } from "react";
+import { CodeSnippet } from "../components/code-snippet";
 import { PageLayout } from "../components/page-layout";
-//import { getPublicResource } from "../services/message.service";
+import { getPublicResource } from "../services/message.service";
 import { Auth0Feature } from "../components/auth0-feature";
 import { Helmet } from "react-helmet";
 
@@ -51,7 +51,7 @@ export const AboutPage = () => {
     {
       title: "Dr. Laurie Gelardi",
       description:
-        "A major supporter, program tester, and provider of Nursing resources at California State University, Northridge",
+        "Major supporter, program tester, and provider of Nursing resources at California State University, Northridge",
       icon: "https://i.imgur.com/C6HjF51.png",
     },
     {
@@ -90,6 +90,12 @@ export const AboutPage = () => {
         "Unity Developer & Backend Developer for Development Team 2022",
       icon: "https://i.imgur.com/C6HjF51.png",
     },
+    {
+      title: "Melissa Snell",
+      description:
+        "Supporter, program tester, and advisor for proper implementation of Nursing resources at California State University, Northridge",
+      icon: "https://i.imgur.com/C6HjF51.png",
+    }
     
   ];
 
