@@ -84,8 +84,6 @@ export const ArtifactsPage = () => {
           <br></br>
         </p>
 
-     
-
         <div className="content__body">
           <p id="page-description">
             <span>
