@@ -1,10 +1,10 @@
 import React, { useEffect, useState } from "react";
-import { CodeSnippet } from "../components/code-snippet";
+//import { CodeSnippet } from "../components/code-snippet";
 import { PageLayout } from "../components/page-layout";
 import { getPublicResource } from "../services/message.service";
 import { Helmet } from "react-helmet";
 
-export const ArtifactsPage = () => {
+export const PublicPage = () => {
   const [message, setMessage] = useState("");
 
   useEffect(() => {
@@ -37,16 +37,16 @@ export const ArtifactsPage = () => {
   return (
     <PageLayout>
         <Helmet>
-          <title>Project Artifacts Page</title>
+          <title>Resources Page</title>
         </Helmet>
       <div className="content-layout">
         <h1 id="page-title" className="content__title">
-        Project Artifacts
+          Resources
         </h1>
         <div className="content__body">
           <p id="page-description">
             <span>
-              Our team's deliverables and artifacts of the Nursing Virtual Reality Project!
+              Our team's work and resources relating to the Nursing Virtual Reality Project!
             </span>
           </p>
         </div>
@@ -57,9 +57,9 @@ export const ArtifactsPage = () => {
           <br></br>
         </p>
 
-        <div className="content__body">
-          <p>Nursing Virtual Reality Senior Design Poster</p>
-          <img src={"https:i.imgur.com/8bJY5e4.png"} width="100%" height="90%" alt="Nursing Virtual Reality Senior Design Poster" />
+        <div>
+        <img src={"https:i.imgur.com/8bJY5e4.png"} width="1103" 
+     height="1500" alt="Nursing Virtual Reality Senior Design Poster" />
         </div>
 
         <p>
@@ -71,6 +71,7 @@ export const ArtifactsPage = () => {
 
         <div className="content__body">
           <p id="page-description">
+           
             <span>
             <a href="https://www.canva.com/design/DAFfxWfu-5o/giteZxVUXyHO8iZ87kooGA/view?utm_content=DAFfxWfu-5o&utm_campaign=designshare&utm_medium=link&utm_source=publishsharelink">Click here to check out our slideshow presentation!</a>
 
@@ -83,8 +84,6 @@ export const ArtifactsPage = () => {
           <hr></hr>
           <br></br>
         </p>
-
-     
 
         <div className="content__body">
           <p id="page-description">
