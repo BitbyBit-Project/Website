@@ -9,14 +9,16 @@ export const NavBarTabs = () => {
     <div className="nav-bar__tabs">
       
       <NavBarTab path="/about" label="About" />
+      <NavBarTab path="/artifacts" label="Artifacts" />
+      <NavBarTab path="/tech" label="Technology" />
       <NavBarTab path="/contact" label="Contact" />
-      <NavBarTab path="/resources" label="Resources" />
 
       {isAuthenticated && (
         <>
           <NavBarTab path="/profile" label="Profile" />
-          <NavBarTab path="/admin" label="Admin" />
           <NavBarTab path="/gradesheet" label="Grade Sheet" />
+          <NavBarTab path="/cardiosetup" label="Cardio Setup" />
+          <NavBarTab path="/respsetup" label="Resp Setup" />
         </>
       )}
     </div>

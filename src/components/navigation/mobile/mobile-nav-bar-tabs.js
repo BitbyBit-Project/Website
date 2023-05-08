@@ -14,14 +14,20 @@ export const MobileNavBarTabs = ({ handleClick }) => {
       />
     <div className="mobile-nav-bar__tabs">
       <MobileNavBarTab
-        path="/contact"
-        label="Contact"
+        path="/artifacts"
+        label="Artifacts"
         handleClick={handleClick}
       />
-    <div className="mobile-nav-bar__tabs">
+      <div className="mobile-nav-bar__tabs">
       <MobileNavBarTab
-        path="/resources"
-        label="Resources"
+        path="/tech"
+        label="Technology"
+        handleClick={handleClick}
+      />
+      <div className="mobile-nav-bar__tabs">
+      <MobileNavBarTab
+        path="/contact"
+        label="Contact"
         handleClick={handleClick}
       />
       {isAuthenticated && (
@@ -43,6 +49,6 @@ export const MobileNavBarTabs = ({ handleClick }) => {
           />
         </>
       )}
-    </div> </div> </div>
+    </div> </div> </div> </div>
   );
 };

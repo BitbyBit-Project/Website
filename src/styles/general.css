@@ -31,6 +31,83 @@ body {
   overflow-y: scroll;
 }
 
+/* Adding Nodes */
+.nodeHaptic {
+  width: 15px;
+  height: 15px;
+  border: 2px solid lightgreen;
+  border-radius: 50%;
+  background-color: transparent;
+  position: absolute;
+}
+.nodeHeart {
+  width: 15px;
+  height: 15px;
+  border: 2px solid lightblue;
+  border-radius: 50%;
+  background-color: transparent;
+  position: absolute;
+}
+.nodeBreathing {
+  width: 15px;
+  height: 15px;
+  border: 2px solid lightgoldenrodyellow;
+  border-radius: 50%;
+  background-color: transparent;
+  position: absolute;
+}
+
+.nodeBreathingSide {
+  width: 10px;
+  height: 15px;
+  border: 2px solid lightgoldenrodyellow;
+  border-radius: 50%;
+  background-color: transparent;
+  position: absolute;
+}
+
+/* Adding Customization Dropdown Menu */
+.dropdown-menu-container {
+  display: flex;
+  flex-direction: column;
+}
+
+.dropdown-menu {
+  position: relative;
+  display: inline-block;
+  width: 50%;
+
+}
+
+.dropdown-menu select {
+  font-size: 1.5rem; 
+  padding: 8px; 
+  margin: .5rem;
+  margin-top: 2rem;
+  margin-bottom: 2rem;
+}
+
+.dropdown-title {
+  font-size: 1.3rem; 
+  margin: .5rem;
+  margin-bottom: -1rem;
+}
+
+
+.dropdown-menu-content {
+  font-size: 1.5rem;
+  color: black;
+  margin: .5rem;
+  width: 19rem;
+}
+
+.dropdown-menu-label {
+  display: block;
+  margin-bottom: 0.5rem;
+  font-weight: bold;
+  font-size: 1.5rem;
+}
+
 /*Added homeh1*/
 h1,
 h2,
@@ -179,4 +256,6 @@ code {
   .mobile-scroll-lock {
     overflow: hidden;
   }
+
+
 }
