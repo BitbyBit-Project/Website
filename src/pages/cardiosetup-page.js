@@ -117,13 +117,13 @@ export const CardioSetupPage = () => {
   const handleSubmit = () => {
     const tableName = "cardiovascular_exam_instuctor_answers";
     const columns = ["RSB_2IS", "LSB_2IS", "LSB_3IS", "LSB_4IS", "LSB_5IS"];
-    const values = [set4, set5, set6, set7, set8];
+    const values = [node0, node1, node2, node3, node4];
     const query = buildQuery(tableName, columns, values);
   
     fetch("http://localhost:3000/submit-query", {
       method: "POST",
       headers: { "Content-Type": "application/json" },
-      body: JSON.stringify({ query }),
+      body: JSON.stringify({ values }),
     })
     .then((res) => {
       if (!res.ok) {
