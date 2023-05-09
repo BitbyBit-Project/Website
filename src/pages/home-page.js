@@ -31,7 +31,9 @@ export const HomePage = () => (
             </strong>
           </span>
         </p>
-        <p align="center">
+
+    <div>
+    <p align="center">
         Features & Components in Program Include:
           <ul>
             <li>Cardiovascular Assessment</li>
@@ -49,6 +51,8 @@ export const HomePage = () => (
           </ul>
         </p>
     </div>
+    </div>
+        
     </div>
     
   </PageLayout>

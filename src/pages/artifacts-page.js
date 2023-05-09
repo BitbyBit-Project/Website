@@ -63,7 +63,7 @@ export const ArtifactsPage = () => {
         </div>
 
         <p>
-          <br></br>
+          
           <hr></hr>
           <br></br>
         </p>
@@ -83,60 +83,6 @@ export const ArtifactsPage = () => {
           <hr></hr>
           <br></br>
         </p>
-
-        <div className="content__body">
-          <p id="page-description">
-            <span>
-             Nursing Virtual Reality powered by: 
-            </span>
-          </p>
-        </div>
-
-       
-
-            <div class="column">
-              
-              <img src = {"https://i.imgur.com/hVyuGT6.png"} width = "40" height = "40" alt = "VSCode" />
-              <span>Visual Studio Code    </span>
-
-              <img src = {"https://i.imgur.com/aXnDfLc.png"} width = "40" height = "40" alt = "Unity" />
-              <span>Unity   </span>
-
-              <img src = {"https://i.imgur.com/ZBE9YDe.png"} width = "50" height = "50" alt = "React" />
-              <span>React   </span>
-
-              <img src = {"https://i.imgur.com/zQC1wUg.png"} width = "75" height = "50" alt = "AWS" />
-              <span>Amazon Web Services   </span>
-
-              <img src = {"https://i.imgur.com/HJdzJWT.png"} width = "40" height = "40" alt = "Maya" />
-              <span>Autodesk Maya   </span>
-
-              <img src = {"https://i.imgur.com/BR1xOjZ.png"} width = "75" height = "50" alt = "MySQL" />
-              <span>MySQL   </span>
-
-              <img src = {"https://i.imgur.com/Fg5M6LF.png"} width = "50" height = "50" alt = "Adobe Audition" />
-              <span>Adobe Audition    </span>
-
-              <img src = {"https://i.imgur.com/6EWSJ38.pngg"} width = "50" height = "50" alt = "Adobe Mixamo" />
-              <span>Adobe Mixamo    </span>
-
-              <img src = {"https://i.imgur.com/bL7y7oO.png"} width = "50" height = "50" alt = "GitHub" /> 
-              <span>Github    </span>
-
-              <img src = {"https://i.imgur.com/QwquTqZ.png"} width = "50" height = "50" alt = "Jira" />
-              <span>Jira    </span>
-
-             
-
-
-
-
-
-            </div>
-
-            
-
-        
 
       </div>
     </PageLayout>

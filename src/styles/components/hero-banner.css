@@ -66,8 +66,16 @@
   /* responsive */
 
   margin: 2.4rem 0 8px 0;
+  text-align: center;
+  font-size: 8rem;
+  color: white;
 
-  font-size: 6.6rem;
+  /*text-shadow: //Adds a border to the title
+    -3px -1px 0 #000,
+    1px -1px 0 #000,
+    -1px 1px 0 #000,
+    1px 1px 0 #000; */ 
+
 }
 
 .hero-banner__description {
