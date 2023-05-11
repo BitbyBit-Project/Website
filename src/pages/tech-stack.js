@@ -25,7 +25,10 @@ export const TechPage = () => {
         <div className="content__body">
           <p id="page-description">
             <span>
-              A technology stack (tech stack) refers to the set of tools, programming languages, and technologies that work together to build a software application. Here is a list of the technologies used in the Nursing Virtual Reality Project!
+              A technology stack (tech stack) refers to the set of tools, programming languages, and technologies that work together to build a software application.
+              <br></br>
+              <br></br>
+              Here is a list of the technologies used in the Nursing Virtual Reality Project!
             </span>
           </p>
         </div>
@@ -51,7 +54,7 @@ export const TechPage = () => {
         </p>
        
 
-        <div class = "column" align="center">
+      <div align="center">
       <div class="flex-parent-element">
         
         <div class="flex-child-element magenta">
@@ -84,11 +87,11 @@ export const TechPage = () => {
          <p> <span> React</span></p>
         </div>
         
-        </div>
-        </div>
+      </div>
+    </div>
 
         
-    <div class = "column" align="center">
+    <div align="center">
       <div class="flex-parent-element">
         
         <div class="flex-child-element magenta">
@@ -117,8 +120,8 @@ export const TechPage = () => {
         </div>
 
 
-        </div>
-        </div>
+      </div>
+    </div>
 
        
         
@@ -127,19 +130,13 @@ export const TechPage = () => {
 
       
 
-    <div className="content__body">
-          <p id="page-description">
-            <span>
-             Featured languages: 
-            </span>
-          </p>
-    </div>
+
 
 
     
 
 
-    <div class = "column" align="center">
+    <div align="center">
       <div class="flex-parent-element">
        
         <div class="flex-child-element magenta">
@@ -168,10 +165,8 @@ export const TechPage = () => {
         </div>
 
 
-        </div>
-        </div>
-
-
+      </div>
+    </div>
 
 
 

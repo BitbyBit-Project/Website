@@ -103,7 +103,7 @@ export const AboutPage = () => {
     <PageLayout>
       <div className="content-layout">
         <Helmet>
-          <title>About the Team</title>
+          <title>About Us</title>
         </Helmet>
         <h1 id="page-title" className="content__title">
           About Us
@@ -150,12 +150,13 @@ export const AboutPage = () => {
         <hr></hr>
         <br></br>
 
-          <p id="page-description" align = "center">
-            <span>
-              <strong>This is the Computer Science development team of the Nursing Virtual Reality Project 2023!</strong>
-            </span>
-          </p>
-          <br></br>
+        <br></br>
+        <h1 id="page-title" className="content__title">
+          Development Team of 2023
+        </h1>
+
+        <br></br>
+        
         <div className="auth0-features__grid">
 
         {featuresList.map((feature) => (
@@ -173,11 +174,11 @@ export const AboutPage = () => {
         <hr></hr>
         <br></br>
 
-        <p align = "center">
-            <span>
-              <strong>Contributors and Stakeholders of the Nursing Virtual Reality Project 2023</strong>
-            </span>
-        </p>
+        <br></br>
+        <h1 id="page-title" className="content__title">
+        Contributors and Stakeholders of the NVR Project
+        </h1>
+        <br></br>
         
           <div className="auth0-features__grid">
           {stakeholdersList.map((feature) => (

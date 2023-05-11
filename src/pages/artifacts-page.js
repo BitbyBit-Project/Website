@@ -58,31 +58,52 @@ export const ArtifactsPage = () => {
         </p>
 
         <div className="content__body">
-          <p>Nursing Virtual Reality Senior Design Poster</p>
+          <p id="page-description"><b>Nursing Virtual Reality Senior Design Poster</b></p>
           <img src={"https:i.imgur.com/8bJY5e4.png"} width="100%" height="90%" alt="Nursing Virtual Reality Senior Design Poster" />
         </div>
 
         <p>
-          
           <hr></hr>
           <br></br>
         </p>
 
 
         <div className="content__body">
-          <p id="page-description">
+          <p><b>Nursing Research Day 2023 at CSUN - Canva Presentation</b></p>
+          <img src={"https://i.imgur.com/Cyg785P.png"} width="100%" height="90%" alt="Nursing Virtual Reality Senior Design Poster" />
+          <p>
             <span>
-            <a href="https://www.canva.com/design/DAFfxWfu-5o/giteZxVUXyHO8iZ87kooGA/view?utm_content=DAFfxWfu-5o&utm_campaign=designshare&utm_medium=link&utm_source=publishsharelink">Click here to check out our slideshow presentation!</a>
-
+            <br></br>
+            <a href="https://www.canva.com/design/DAFfxWfu-5o/giteZxVUXyHO8iZ87kooGA/view?utm_content=DAFfxWfu-5o&utm_campaign=designshare&utm_medium=link&utm_source=publishsharelink">
+              <u>Click here to check out our slideshow presentation!</u></a>
             </span>
           </p>
         </div>
 
         <p>
           <br></br>
+          <br></br>
+        </p>
+        
+        
+        <p>
+          <br></br>
           <hr></hr>
           <br></br>
         </p>
+
+        <div className="content__body">
+          <p><b>Senior Design Class Website</b></p>
+          <img src={"https://i.imgur.com/quCjPrR.png"} width="100%" height="90%" alt="Nursing Virtual Reality Senior Design Poster" />
+          <p>
+            <br></br>
+            <a href="https://github.com/CSUN-LLIU/sd.github.io">
+              <u>Click to see Github Repository of Senior Design Class Website!</u></a>
+          </p>
+        </div>
+
+        
+        
 
       </div>
     </PageLayout>
