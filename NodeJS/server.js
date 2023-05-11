@@ -3,7 +3,7 @@ const bodyParser = require("body-parser");
 const cors = require('cors');
 const port = 3000;
 
-const app=express();
+const app = express();
 app.use(bodyParser.json());
 app.use(cors());
 
@@ -28,6 +28,22 @@ conn.connect(function(err) {
 app.get('/',(req,res)=>{
   res.json('OK');
 })
+
+
+app.get('/gradesheet', (req, res) => {
+  console.log('Received request to /gradesheet')
+  const sql = "SELECT Ant_RUL, Ant_RML, Ant_RLL, Ant_LUL, Ant_LLL, Post_RUL, Post_RLL, Post_LUL, Post_LLL, Lat_RUL, Lat_RML, Lat_RLL, Lat_LUL, Lat_LLL FROM S1Session ORDER BY idS1Session DESC LIMIT 1";
+  conn.query(sql, function (err, result) {
+    if (err) {
+      console.error("Error executing SQL query:", err);
+      res.status(500).json({ error: "Error fetching grades" });
+      return;
+    }
+    console.log(result);
+    res.json(result);
+  });
+});
+
 
 app.post('/submit-query', (req, res) => {
     const tableName = "cardiovascular_exam_instructor_answers";

@@ -1,11 +1,13 @@
 import React, { useEffect, useState } from "react";
 import { PageLayout } from "../components/page-layout";
 import { getProtectedResource } from "../services/message.service";
-import AnteriorGradeTable, { PosteriorGradeTable, LateralGradeTable } from "../components/gradesheet.js";
+import { AnteriorGradeTable, PosteriorGradeTable, LateralGradeTable } from "../components/gradesheet.js";
 import { ThemeProvider } from "@mui/system";
 import { CssBaseline } from "@mui/material";
 import { createTheme } from "@mui/material";
 import { Helmet } from "react-helmet";
+import { toast, ToastContainer } from "react-toastify";
+import "react-toastify/dist/ReactToastify.css";
 
 const theme = createTheme( {
   typography: {
@@ -14,39 +16,29 @@ const theme = createTheme( {
 });
 
 export const GradeSheet = () => {
-  const [message, setMessage] = useState("");
+
+  const [grades, setGrades] = useState([]);
 
   useEffect(() => {
-    let isMounted = true;
-
-    const getMessage = async () => {
-      const { data, error } = await getProtectedResource();
-
-      if (!isMounted) {
-        return;
-      }
-
-      if (data) {
-        setMessage(JSON.stringify(data, null, 2));
-      }
-
-      if (error) {
-        setMessage(JSON.stringify(error, null, 2));
-      }
-    };
-
-    getMessage();
-
-    return () => {
-      isMounted = false;
-    };
+    fetchGrades();
   }, []);
 
-
+  const fetchGrades = async () => {
+    try {
+      const response = await fetch('http://localhost:3000/gradesheet');
+      console.log(response);
+      const data = await response.json();
+      console.log(data);
+      setGrades(data);
+    } catch (error) {
+      console.error("Error fetching grades:", error);
+    }
+  };
+  
   return (
     <PageLayout>
         <Helmet>
-          <title>Student Grade Sheet</title>
+          <title>Respiratory Grade Sheet</title>
         </Helmet>
       <div className="content-layout">
         <h1 id="page-title" className="content__title">
@@ -62,11 +54,11 @@ export const GradeSheet = () => {
             </span>
           </p>
         <ThemeProvider theme = {theme}>
-          <AnteriorGradeTable />
+          <AnteriorGradeTable grades={grades} />
           <br></br>
-          <PosteriorGradeTable />
+          <PosteriorGradeTable grades={grades} />
           <br></br>
-          <LateralGradeTable />
+          <LateralGradeTable grades={grades} />
           <br></br>
           <span>
             The student got X choices correct out of Y.
