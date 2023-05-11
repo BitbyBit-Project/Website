@@ -4,6 +4,8 @@ import { getPublicResource } from "../services/message.service";
 import { Helmet } from "react-helmet";
 import { useMutation, QueryClient, QueryClientProvider, useQuery } from "@tanstack/react-query";
 import CardioQuery from "../components/cardio.js";
+import { toast, ToastContainer } from "react-toastify";
+import "react-toastify/dist/ReactToastify.css";
 
 const theClient = new QueryClient();
 
@@ -114,30 +116,28 @@ export const CardioSetupPage = () => {
     return `INSERT INTO \`NursingVR\`.\`${tableName}\` (${columnsString}) VALUES (${valuesString});`;
   }
   
-  const handleSubmit = () => {
-    const tableName = "cardiovascular_exam_instuctor_answers";
+  const handleSubmit = async () => {
+    const tableName = "cardiovascular_exam_instructor_answers";
     const columns = ["RSB_2IS", "LSB_2IS", "LSB_3IS", "LSB_4IS", "LSB_5IS"];
     const values = [node0, node1, node2, node3, node4];
     const query = buildQuery(tableName, columns, values);
   
-    fetch("http://localhost:3000/submit-query", {
-      method: "POST",
-      headers: { "Content-Type": "application/json" },
-      body: JSON.stringify({ values }),
-    })
-    .then((res) => {
-      if (!res.ok) {
-        throw new Error("Oh no!!!!! The network response was not ok :(");
+    try {
+      const response = await fetch("http://localhost:3000/submit-query", {
+        method: "POST",
+        headers: { "Content-Type": "application/json" },
+        body: JSON.stringify({ values }),
+      });
+  
+      if (response.ok) {
+        toast.success("Data submitted successfully");
+      } else {
+        throw new Error("Failed to submit data");
       }
-      return res.json();
-    })
-    .then((data) => {
-      console.log(data);
-    })
-    .catch((error) => {
-      console.error("There was an error!", error);
-    });
-};
+    } catch (error) {
+      toast.error("An error occurred. Please try again.");
+    }
+  };
   
 
   return (
@@ -268,6 +268,7 @@ export const CardioSetupPage = () => {
       <button onClick={handleSubmit}>Submit Setup</button>
       </div>
       </div>
+      <ToastContainer /> {/* Add ToastContainer component for displaying pop-up messages */}
       </div>
     </PageLayout>
     </QueryClientProvider>
