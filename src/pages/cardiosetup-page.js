@@ -256,9 +256,7 @@ export const CardioSetupPage = () => {
           <div className="dropdown-title ">BPM:</div>
           <select className="dropdown-menu-content" onClick={handleDropdownToggle5} onChange={(e) => setBPM(e.target.value)}>
             <option value="" disabled selected>BPM </option>
-            <option value="0">1 million</option>
-            <option value="1">2 million</option>
-            <option value="2">90</option>
+            <option value="0">74</option>
           </select>
           </div>
           </div>
