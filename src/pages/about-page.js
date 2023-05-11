@@ -117,7 +117,7 @@ export const AboutPage = () => {
 
         <div className="content__body">
       
-        <p class='indent'>
+        <p class='indent' align="justify">
           <span>
             <strong>
                 Nursing Virtual Reality allows students to conduct human cardiovascular and respiratory assessments
@@ -127,7 +127,7 @@ export const AboutPage = () => {
             </strong>
           </span>
         </p>
-        <p class='indent'>
+        <p class='indent' align="justify">
           <span>
             <strong>
                 Because the program is built on the feedback and 
