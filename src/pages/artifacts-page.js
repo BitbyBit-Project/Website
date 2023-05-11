@@ -59,7 +59,7 @@ export const ArtifactsPage = () => {
 
         <div className="content__body">
           <p id="page-description"><b>Nursing Virtual Reality Senior Design Poster</b></p>
-          <img src={"https:i.imgur.com/8bJY5e4.png"} width="100%" height="90%" alt="Nursing Virtual Reality Senior Design Poster" />
+          <img src={"https://i.imgur.com/8bJY5e4.png"} width="100%" height="90%" alt="Nursing Virtual Reality Senior Design Poster" />
         </div>
 
         <p>
