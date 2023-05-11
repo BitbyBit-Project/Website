@@ -9,7 +9,6 @@ import "react-toastify/dist/ReactToastify.css";
 
 const theClient = new QueryClient();
 
-
 export const CardioSetupPage = () => {
   const [node0, set4] = useState("");
   const [node1, set5] = useState("");
@@ -268,7 +267,7 @@ export const CardioSetupPage = () => {
       <button onClick={handleSubmit}>Submit Setup</button>
       </div>
       </div>
-      <ToastContainer /> {/* Add ToastContainer component for displaying pop-up messages */}
+      <ToastContainer />
       </div>
     </PageLayout>
     </QueryClientProvider>

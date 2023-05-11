@@ -3,6 +3,12 @@ import React, { useEffect, useState } from "react";
 import { PageLayout } from "../components/page-layout";
 import { getPublicResource } from "../services/message.service";
 import { Helmet } from "react-helmet";
+import { useMutation, QueryClient, QueryClientProvider, useQuery } from "@tanstack/react-query";
+import { toast, ToastContainer } from "react-toastify";
+import "react-toastify/dist/ReactToastify.css";
+import { Query } from "@tanstack/react-query";
+
+const theClient2 = new QueryClient()
 
 export const RespSetupPage = () => {
   const [node0, set0] = useState("");
@@ -187,57 +193,54 @@ export const RespSetupPage = () => {
   }
   };
 
-  useEffect(() => {
-    document.addEventListener("click", handleDocumentClick);
+  function buildQuery(tableName, columns, values) {
+    const columnsString = columns.map((column) => `\`${column}\``).join(", ");
+    const valuesString = values.map((value) => `'${value}'`).join(", ");
+    return `INSERT INTO \`NursingVR\`.\`${tableName}\` (${columnsString}) VALUES (${valuesString});`;
+  }
 
-    return () => {
-      document.removeEventListener("click", handleDocumentClick);
-    };
-  }, []);
-
-  useEffect(() => {
-    let isMounted = true;
-
-    const getMessage = async () => {
-      const { data, error } = await getPublicResource();
-
-      if (!isMounted) {
-        return;
+  const handleSubmit = async () => {
+    const tableName = "respiratory_exam_instructor_answers";
+    const columns = ["Ant_RUL", "Ant_RML", "Ant_RLL", "Ant_LUL", "Ant_LLL", "Post_RUL", "Post_RLL", "Post_LUL", "Post_LLL", "Lat_RML", "Lat_RLL", "Lat_LUL", "Lat_LLL"];
+    const values = [node5, node13, node18, node4, node17, node1, node16, node0, node15, node14, node19, node7, node20];
+    const query = buildQuery(tableName, columns, values);
+  
+    try {
+      const response = await fetch("http://localhost:3000/submit-query2", {
+        method: "POST",
+        headers: { "Content-Type": "application/json" },
+        body: JSON.stringify({ values }),
+      });
+  
+      if (response.ok) {
+        toast.success("Data submitted successfully.");
+      } else {
+        throw new Error("Failed to submit data.");
       }
-
-      if (data) {
-        setMessage(JSON.stringify(data, null, 2));
-      }
-
-      if (error) {
-        setMessage(JSON.stringify(error, null, 2));
-      }
-    };
-
-    getMessage();
-
-    return () => {
-      isMounted = false;
-    };
-  }, []);
+    } catch (error) {
+      toast.error("An error occurred. Please try again.");
+    }
+  };
+  
 
   return (
+    <QueryClientProvider client={theClient2}>
     <PageLayout>
         <Helmet>
-          <title>CardioSetupPage</title>
+          <title>Respiratory Exam Setup</title>
         </Helmet>
       <div className="content-layout" 
       >
         <h1 id="page-title" className="content__title">
         Respiratory Exam Setup Page
         </h1>
-        {/* <div className="content__body">
+        { <div className="content__body">
           <p id="page-description">
             <span>
               <strong>Nodes and stuff</strong>
             </span>
           </p>
-        </div> */}
+        </div> }
 
         
       <p>
@@ -600,8 +603,13 @@ export const RespSetupPage = () => {
       </div>}
       </div>
     </div>
+    <div class="wrapper">
+      <button onClick={handleSubmit}>Submit Setup</button>
+    </div>
+      <ToastContainer />
       </div>
-
+      
     </PageLayout>
+    </QueryClientProvider>
   );
 };

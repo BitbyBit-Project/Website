@@ -42,6 +42,19 @@ app.post('/submit-query', (req, res) => {
     });
   });
 
+  app.post('/submit-query2', (req, res) => {
+    const tableName = "respiratory_exam_instructor_answers";
+    const columns = ["Ant_RUL", "Ant_RML", "Ant_RLL", "Ant_LUL", "Ant_LLL", "Post_RUL", "Post_RLL", "Post_LUL", "Post_LLL", "Lat_RML", "Lat_RLL", "Lat_LUL", "Lat_LLL"];
+    const values = req.body.values;
+    const query = `INSERT INTO ${tableName} (${columns.join(", ")}) VALUES (${values.map((value) => `"${value}"`).join(", ")});`;
+    console.log(query);
+    conn.query(query, function (err, result) {
+      if (err) throw err;
+      console.log("Query executed successfully.");
+      res.send("Query received and executed successfully.");
+    });
+  });  
+
 
 app.listen(3000,()=>{
   console.log("Server listening at http://localhost:3000");
