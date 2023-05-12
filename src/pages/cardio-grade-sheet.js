@@ -25,7 +25,7 @@ export const CardioGradeSheet = () => {
 
   const fetchGrades = async () => {
     try {
-      const response = await fetch('http://54.213.233.117/nursingvr_backend/cardiogradesheet');
+      const response = await fetch('http://54.213.233.117:3000/cardiogradesheet');
       console.log(response);
       const data = await response.json();
       console.log(data);

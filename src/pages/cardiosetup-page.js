@@ -124,7 +124,7 @@ export const CardioSetupPage = () => {
     const query = buildQuery(tableName, columns, values);
   
     try {
-      const response = await fetch("http://54.213.233.117/nursingvr_backend/submit-query", {
+      const response = await fetch("http://54.213.233.117:3000/submit-query", {
         method: "POST",
         headers: { "Content-Type": "application/json" },
         body: JSON.stringify({ values }),
