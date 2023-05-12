@@ -71,6 +71,8 @@ export function AnteriorGradeTable({ grades }) {
 export function PosteriorGradeTable({ grades }) {
   const receivedStatus = grades?.[0] || {}; // Assuming grades is an array with at least one element
 
+  const filteredRows = rows.filter(row => row.name !== 'RML');
+
   return (
     <TableContainer component={Paper}>
       <Table sx={{ minWidth: 650 }} size="small" aria-label="a dense simple table">
@@ -85,7 +87,7 @@ export function PosteriorGradeTable({ grades }) {
           </TableRow>
         </TableHead>
         <TableBody>
-          {rows.map((row, index) => (
+          {filteredRows.map((row, index) => (
             <TableRow key={row.name} sx={{ '&:last-child td, &:last-child th': { border: 0 } }}>
               <TableCell component="th" scope="row">
                 {row.name}
