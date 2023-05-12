@@ -11,27 +11,27 @@ import { Query } from "@tanstack/react-query";
 const theClient2 = new QueryClient()
 
 export const RespSetupPage = () => {
-  const [node0, set0] = useState("");
-  const [node1, set1] = useState("");
-  const [node2, set2] = useState("");
-  const [node3, set3] = useState("");
-  const [node4, set4] = useState("");
-  const [node5, set5] = useState("");
-  const [node6, set6] = useState("");
-  const [node7, set7] = useState("");
-  const [node8, set8] = useState("");
-  const [node9, set9] = useState("");
-  const [node10, set10] = useState("");
-  const [node11, set11] = useState("");
-  const [node12, set12] = useState("");
-  const [node13, set13] = useState("");
-  const [node14, set14] = useState("");
-  const [node15, set15] = useState("");
-  const [node16, set16] = useState("");
-  const [node17, set17] = useState("");
-  const [node18, set18] = useState("");
-  const [node19, set19] = useState("");
-  const [node20, set20] = useState("");
+  const [node0, set0] = useState(0);
+  const [node1, set1] = useState(0);
+  const [node2, set2] = useState(0);
+  const [node3, set3] = useState(0);
+  const [node4, set4] = useState(0);
+  const [node5, set5] = useState(0);
+  const [node6, set6] = useState(0);
+  const [node7, set7] = useState(0);
+  const [node8, set8] = useState(0);
+  const [node9, set9] = useState(0);
+  const [node10, set10] = useState(0);
+  const [node11, set11] = useState(0);
+  const [node12, set12] = useState(0);
+  const [node13, set13] = useState(0);
+  const [node14, set14] = useState(0);
+  const [node15, set15] = useState(0);
+  const [node16, set16] = useState(0);
+  const [node17, set17] = useState(0);
+  const [node18, set18] = useState(0);
+  const [node19, set19] = useState(0);
+  const [node20, set20] = useState(0);
 
   const [message, setMessage] = useState("");
   /* Color Changes for nodes when corresponding dropdown menus are clicked */
@@ -204,7 +204,7 @@ export const RespSetupPage = () => {
     const columns = ["LUL_P_bNode", "RUL_P_bNode", "BL_A_hNode", "BR_A_hNode", "LUL_A_bNode", "RUL_A_bNode", "RUL_L_bNode", "LUL_L_bNode",
       "LML_A_bNode", "RML_P_bNode", "Apex_A_hNode", "LL_A_hNode", "LML_P_bNode", "RML_A_bNode", "RML_L_bNode", "LLL_P_bNode", "RLL_P_bNode",
       "LLL_A_bNode", "RLL_A_bNode", "RLL_L_bNode", "LLL_L_bNode"];
-    const values = [node5, node13, node18, node4, node17, node1, node16, node0, node15, node14, node19, node7, node20];
+    const values = [node0, node1, node2, node3, node4, node5, node6, node7, node8, node9, node10, node11, node12, node13, node14, node15, node16, node17, node18, node19, node20];
     const query = buildQuery(tableName, columns, values);
   
     try {
@@ -517,7 +517,7 @@ export const RespSetupPage = () => {
 
         <div className="dropdown-title">LLL P bNode:</div>
         <select className="dropdown-menu-content" onClick={handleDropdownToggle15} onChange={(e) => set15(e.target.value)}>
-        <option value="4">Expiratory Wheezing</option>
+          <option value="4">Expiratory Wheezing</option>
           <option value="0">Bronchial</option>
           <option value="1">Crackles-Coarse</option>
           <option value="2">Crackles-Fine</option>

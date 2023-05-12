@@ -62,7 +62,7 @@ app.get('/cardiogradesheet', (req, res) => {
 
 app.post('/submit-query', (req, res) => {
     const tableName = "cardiovascular_exam_instructor_answers";
-    const columns = ["RSB_2IS", "LSB_2IS", "LSB_3IS", "LSB_4IS", "LSB_5IS"];
+    const columns = ["RSB_2IS", "LSB_2IS", "LSB_3IS", "LSB_4IS", "LSB_5IS", "BPM"];
     const values = req.body.values;
     const query = `INSERT INTO ${tableName} (${columns.join(", ")}) VALUES (${values.map((value) => `"${value}"`).join(", ")});`;
     console.log(query);
@@ -75,8 +75,12 @@ app.post('/submit-query', (req, res) => {
 
   app.post('/submit-query2', (req, res) => {
     const tableName = "respiratory_exam_instructor_answers";
-    const columns = ["Ant_RUL", "Ant_RML", "Ant_RLL", "Ant_LUL", "Ant_LLL", "Post_RUL", "Post_RLL", "Post_LUL", "Post_LLL", "Lat_RML", "Lat_RLL", "Lat_LUL", "Lat_LLL"];
+    const columns = ["LUL_P_bNode", "RUL_P_bNode", "BL_A_hNode", "BR_A_hNode", "LUL_A_bNode", "RUL_A_bNode", "RUL_L_bNode", "LUL_L_bNode",
+      "LML_A_bNode", "RML_P_bNode", "Apex_A_hNode", "LL_A_hNode", "LML_P_bNode", "RML_A_bNode", "RML_L_bNode", "LLL_P_bNode", "RLL_P_bNode",
+      "LLL_A_bNode", "RLL_A_bNode", "RLL_L_bNode", "LLL_L_bNode"];
     const values = req.body.values;
+    console.log("Columns length:", columns.length);
+    console.log("Values length:", values.length);
     const query = `INSERT INTO ${tableName} (${columns.join(", ")}) VALUES (${values.map((value) => `"${value}"`).join(", ")});`;
     console.log(query);
     conn.query(query, function (err, result) {

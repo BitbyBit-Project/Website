@@ -10,13 +10,13 @@ import "react-toastify/dist/ReactToastify.css";
 const theClient = new QueryClient();
 
 export const CardioSetupPage = () => {
-  const [node0, set4] = useState("");
-  const [node1, set5] = useState("");
-  const [node2, set6] = useState("");
-  const [node3, set7] = useState("");
-  const [node4, set8] = useState("");
+  const [node0, set4] = useState(2);
+  const [node1, set5] = useState(3);
+  const [node2, set6] = useState(2);
+  const [node3, set7] = useState(2);
+  const [node4, set8] = useState(2);
 
-  const [BPM, setBPM] = useState("");
+  const [BPM, setBPM] = useState(74);
 
   const [message, setMessage] = useState("");
   
@@ -60,6 +60,8 @@ export const CardioSetupPage = () => {
   };
 
   const handleDocumentClick = (event) => {
+
+
   // Check if the clicked element is within a select element
   const isWithinSelect = event.target.closest(".dropdown-menu-content");
 
@@ -117,12 +119,12 @@ export const CardioSetupPage = () => {
   
   const handleSubmit = async () => {
     const tableName = "cardiovascular_exam_instructor_answers";
-    const columns = ["RSB_2IS", "LSB_2IS", "LSB_3IS", "LSB_4IS", "LSB_5IS"];
-    const values = [node0, node1, node2, node3, node4];
+    const columns = ["RSB_2IS", "LSB_2IS", "LSB_3IS", "LSB_4IS", "LSB_5IS", "BPM"];
+    const values = [node0, node1, node2, node3, node4, BPM];
     const query = buildQuery(tableName, columns, values);
   
     try {
-      const response = await fetch("http://localhost:3000/submit-query", {
+      const response = await fetch("http://54.213.233.117/submit-query", {
         method: "POST",
         headers: { "Content-Type": "application/json" },
         body: JSON.stringify({ values }),
@@ -209,7 +211,7 @@ export const CardioSetupPage = () => {
             <option value="3">S1 Only</option>
             <option value="2">Normal S1 S2 74bpm</option>
             <option value="0">Heart Murmur</option>
-            <option value="1">Normal S1 S2</option>
+          <option value="1">Normal S1 S2</option>
             <option value="4">S3 Only</option>
             <option value="5">S3 S4</option>
             <option value="6">S4 Only</option>
@@ -219,7 +221,7 @@ export const CardioSetupPage = () => {
         <select className="dropdown-menu-content" onClick={handleDropdownToggle2} onChange={(e) => set6(e.target.value)}>
             <option value="2">Normal S1 S2 74bpm</option>
             <option value="0">Heart Murmur</option>
-            <option value="1">Normal S1 S2</option>
+          <option value="1">Normal S1 S2</option>
             <option value="3">S1 Only</option>
             <option value="4">S3 Only</option>
             <option value="5">S3 S4</option>
@@ -230,7 +232,7 @@ export const CardioSetupPage = () => {
         <select className="dropdown-menu-content" onClick={handleDropdownToggle3} onChange={(e) => set7(e.target.value)}>
             <option value="2">Normal S1 S2 74bpm</option>
             <option value="0">Heart Murmur</option>
-            <option value="1">Normal S1 S2</option>
+          <option value="1">Normal S1 S2</option>
             <option value="3">S1 Only</option>
             <option value="4">S3 Only</option>
             <option value="5">S3 S4</option>
@@ -241,7 +243,7 @@ export const CardioSetupPage = () => {
         <select className="dropdown-menu-content" onClick={handleDropdownToggle4} onChange={(e) => set8(e.target.value)}>
             <option value="2">Normal S1 S2 74bpm</option>
             <option value="0">Heart Murmur</option>
-            <option value="1">Normal S1 S2</option>
+          <option value="1">Normal S1 S2</option>
             <option value="3">S1 Only</option>
             <option value="4">S3 Only</option>
             <option value="5">S3 S4</option>
@@ -259,9 +261,9 @@ export const CardioSetupPage = () => {
           <div style={{ width: "60%"}}>
           <div className="dropdown-menu">
           <div className="dropdown-title ">BPM:</div>
-          <select className="dropdown-menu-content" onClick={handleDropdownToggle5} onChange={(e) => setBPM(e.target.value)}>
-            <option value="" disabled selected>BPM </option>
-            <option value="0">74</option>
+          <select className="dropdown-menu-content" onClick={handleDropdownToggle5} onChange={(e) => setBPM(parseInt(e.target.value))}>
+            <option value="74" disabled selected>BPM</option>
+            <option value="74">74</option>
           </select>
           </div>
           </div>

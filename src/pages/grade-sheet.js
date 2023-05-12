@@ -47,7 +47,7 @@ export const GradeSheet = () => {
         <div className="content__body">
           <p id="page-description">
             <span>
-              This page retrieves the grade sheet of a student from the VR Nursing application.
+              This page retrieves the Respiratory grade sheet of a student from the VR Nursing application.
             </span>
             <span>
               <strong>Only authenticated users can access this page.</strong>
