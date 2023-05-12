@@ -331,26 +331,24 @@ export const RespSetupPage = () => {
         
         <div className="dropdown-title">BL A hNode:</div>
         <select className="dropdown-menu-content" onClick={handleDropdownToggle2} onChange={(e) => set2(e.target.value)}>
-          <option value="1">Normal S1 S2</option>
-          <option value="2">S1 Only</option>
-          <option value="0">Normal 1 2</option>
-          
-          
-          <option value="3">S3 Only</option>
-          <option value="4">S3 S4</option>
-          <option value="5">S4 Only</option>
+            <option value="1">Normal S1 S2</option>
+            <option value="0">Heart Murmur</option>
+            <option value="2">Normal S1 S2 74bpm</option>
+            <option value="3">S1 Only</option>
+            <option value="4">S3 Only</option>
+            <option value="5">S3 S4</option>
+            <option value="6">S4 Only</option>
         </select>
         
         <div className="dropdown-title">BR A hNode:</div>
         <select className="dropdown-menu-content" onClick={handleDropdownToggle3} onChange={(e) => set3(e.target.value)}>
-        <option value="1">Normal S1 S2</option>
-          <option value="2">S1 Only</option>
-          <option value="0">Normal 1 2</option>
-          
-          
-          <option value="3">S3 Only</option>
-          <option value="4">S3 S4</option>
-          <option value="5">S4 Only</option>
+            <option value="1">Normal S1 S2</option>
+            <option value="0">Heart Murmur</option>
+            <option value="2">Normal S1 S2 74bpm</option>
+            <option value="3">S1 Only</option>
+            <option value="4">S3 Only</option>
+            <option value="5">S3 S4</option>
+            <option value="6">S4 Only</option>
         </select>
         
         <div className="dropdown-title">LUL A bNode:</div>
@@ -447,26 +445,24 @@ export const RespSetupPage = () => {
         
         <div className="dropdown-title">Apex A hNode:</div>
         <select className="dropdown-menu-content" onClick={handleDropdownToggle10} onChange={(e) => set10(e.target.value)}>
-        <option value="1">Normal S1 S2</option>
-          <option value="2">S1 Only</option>
-          <option value="0">Normal 1 2</option>
-          
-          
-          <option value="3">S3 Only</option>
-          <option value="4">S3 S4</option>
-          <option value="5">S4 Only</option>
+            <option value="1">Normal S1 S2</option>
+            <option value="0">Heart Murmur</option>
+            <option value="2">Normal S1 S2 74bpm</option>
+            <option value="3">S1 Only</option>
+            <option value="4">S3 Only</option>
+            <option value="5">S3 S4</option>
+            <option value="6">S4 Only</option>
         </select>
         
         <div className="dropdown-title">LL A hNode:</div>
         <select className="dropdown-menu-content" onClick={handleDropdownToggle11} onChange={(e) => set11(e.target.value)}>
-        <option value="1">Normal S1 S2</option>
-          <option value="2">S1 Only</option>
-          <option value="0">Normal 1 2</option>
-          
-          
-          <option value="3">S3 Only</option>
-          <option value="4">S3 S4</option>
-          <option value="5">S4 Only</option>
+            <option value="1">Normal S1 S2</option>
+            <option value="0">Heart Murmur</option>
+            <option value="2">Normal S1 S2 74bpm</option>
+            <option value="3">S1 Only</option>
+            <option value="4">S3 Only</option>
+            <option value="5">S3 S4</option>
+            <option value="6">S4 Only</option>
         </select>
         
         <div className="dropdown-title">LML P bNode:</div>
