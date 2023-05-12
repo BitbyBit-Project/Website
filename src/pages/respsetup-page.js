@@ -208,7 +208,7 @@ export const RespSetupPage = () => {
     const query = buildQuery(tableName, columns, values);
   
     try {
-      const response = await fetch("http://54.213.233.117/nursingvr_backend/submit-query2", {
+      const response = await fetch("http://54.213.233.117/Website/submit-query2", {
         method: "POST",
         headers: { "Content-Type": "application/json" },
         body: JSON.stringify({ values }),
