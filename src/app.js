@@ -17,6 +17,7 @@ import { GradeSheet } from "./pages/grade-sheet";
 import { createTheme } from "@mui/material";
 import { CardioSetupPage } from "./pages/cardiosetup-page";
 import { RespSetupPage } from "./pages/respsetup-page";
+import { CardioGradeSheet } from "./pages/cardio-grade-sheet";
 
 export const App = () => {
   const { isLoading } = useAuth0();
@@ -37,6 +38,7 @@ export const App = () => {
       <Route path="/artifacts" element={<ArtifactsPage />} />
       <Route path="/protected" element={<AuthenticationGuard component={ProtectedPage} />} />
       <Route path="/gradesheet" element={<AuthenticationGuard component={GradeSheet} />} />
+      <Route path="/cardiogradesheet" element={<AuthenticationGuard component={CardioGradeSheet} />} />
       <Route path="/admin" element={<AuthenticationGuard component={AdminPage} />} />
       <Route path="/callback" element={<CallbackPage />} />
       <Route path="/about" element={<AboutPage />} />

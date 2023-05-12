@@ -44,6 +44,21 @@ app.get('/gradesheet', (req, res) => {
   });
 });
 
+app.get('/cardiogradesheet', (req, res) => {
+  console.log('Received request to /cardiogradesheet')
+  const sql = "SELECT RSB_2IS, LSB_2IS, LSB_3IS, LSB_4IS, LSB_5IS, BPM FROM cardiovascular_exam_results ORDER BY id DESC LIMIT 1";
+  conn.query(sql, function (err, result) {
+    if (err) {
+      console.error("Error executing SQL query:", err);
+      res.status(500).json({ error: "Error fetching grades" });
+      return;
+    }
+    console.log(result);
+    res.json(result);
+  });
+});
+
+
 
 app.post('/submit-query', (req, res) => {
     const tableName = "cardiovascular_exam_instructor_answers";
