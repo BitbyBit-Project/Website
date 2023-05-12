@@ -60,9 +60,6 @@ export const GradeSheet = () => {
           <br></br>
           <LateralGradeTable grades={grades} />
           <br></br>
-          <span>
-            The student got X choices correct out of Y.
-          </span>
         </ThemeProvider>
         </div>
       </div>

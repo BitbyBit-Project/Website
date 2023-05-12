@@ -23,15 +23,20 @@ const rows = [
 export function PrecordiumGradeTable({ grades }) {
   const receivedStatus = grades?.[0] || {};
 
-  function getStatusStyleS1S2(value) {
-    return {
-      backgroundColor: value === 'S1, S2' ? 'green' : 'transparent',
-    };
-  }
+  function getStatusStyle(value, propertyName) {
+    const formattedPropertyName = propertyName.replace(/ /g, '_');
 
-  function getStatusStyleMurmur(value) {
+    // Console log to check the value of receivedStatus
+    console.log('Received Status:', receivedStatus);
+
+    // Console log to check if getStatusStyle is being called and receiving the expected arguments
+    console.log('getStatusStyle called with:', value, propertyName);
+
+    // Console log to check the value of receivedStatus[formattedPropertyName]
+    console.log('receivedStatus[formattedPropertyName]:', receivedStatus[formattedPropertyName]);
+
     return {
-      backgroundColor: value === 'Murmur' ? 'green' : 'transparent',
+      backgroundColor: receivedStatus[formattedPropertyName] === value ? '#ffcc80' : 'transparent',
     };
   }
 
@@ -46,21 +51,22 @@ export function PrecordiumGradeTable({ grades }) {
           </TableRow>
         </TableHead>
         <TableBody>
-          {rows.map((row, index) => (
+          {rows.map((row) => (
             <TableRow key={row.name} sx={{ '&:last-child td, &:last-child th': { border: 0 } }}>
               <TableCell component="th" scope="row">
                 {row.name}
               </TableCell>
-              <TableCell align="right" style={getStatusStyleS1S2(receivedStatus[row.name])}>
+              <TableCell align="right" style={getStatusStyle(row.S1S2, row.name)}>
                 {row.S1S2}
               </TableCell>
-              <TableCell align="right" style={getStatusStyleMurmur(receivedStatus[row.name])}>
+              <TableCell align="right" style={getStatusStyle(row.Murmur, row.name)}>
                 {row.Murmur}
-              </TableCell>
+                </TableCell>
             </TableRow>
           ))}
         </TableBody>
       </Table>
-      </TableContainer>
+    </TableContainer>
   );
 }
+

@@ -56,9 +56,7 @@ export const CardioGradeSheet = () => {
         <ThemeProvider theme = {theme}>
           <PrecordiumGradeTable grades={grades} />
           <br></br>
-          <span>
-            The student got X choices correct out of Y.
-          </span>
+
         </ThemeProvider>
         </div>
       </div>
